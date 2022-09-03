@@ -14,13 +14,11 @@ const Home: NextPage = () => {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
 
-            <div className='container-fluid container-fluid--header'>
-                <div className='container'>
-                    <Header />
-                </div>
+            <div className='header'>
+                <Header />
             </div>
 
-            <div className='container-fluid'>
+            <div className='container-fluid container-fluid--main'>
                 <div className='container'>
                     <Banner />
                     <main className='main'>
@@ -36,11 +34,7 @@ const Home: NextPage = () => {
                 </div>
             </div>
 
-            <div className='container-fluid container-fluid--line'>
-                <div className='line'></div>
-            </div>
-
-            <div className='container-fluid'>
+            <div className='container-fluid--footer'>
                 <div className='container'>
                     <Footer />
                 </div>

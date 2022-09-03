@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Header from '../components/Header'
 import Banner from '../components/Banner'
 import MoviesList from '../components/MoviesList'
+import Footer from '../components/Footer'
 
 const Home: NextPage = () => {
     return (
@@ -13,11 +14,15 @@ const Home: NextPage = () => {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
 
-            <div className='container-fluid'>
+            <div className='container-fluid container-fluid--header'>
                 <div className='container'>
                     <Header />
-                    <Banner />
+                </div>
+            </div>
 
+            <div className='container-fluid'>
+                <div className='container'>
+                    <Banner />
                     <main className='main'>
                         <section className='movies'>
                             <p className='movies__title'>Trending Now</p>
@@ -28,6 +33,16 @@ const Home: NextPage = () => {
                             <MoviesList />
                         </section>
                     </main>
+                </div>
+            </div>
+
+            <div className='container-fluid container-fluid--line'>
+                <div className='line'></div>
+            </div>
+
+            <div className='container-fluid'>
+                <div className='container'>
+                    <Footer />
                 </div>
             </div>
         </div>

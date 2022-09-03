@@ -26,11 +26,18 @@ body {
     &-fluid {
         width: 100%;
         background-color: black;
+
+        &--line {
+            width: 100%;
+            height: 2px;
+            background-color: $secondary-color;
+        }
     }
 }
 
 .main {
     margin-top: 100vh;
+    padding-bottom: 4rem;
 }
 
 ul {

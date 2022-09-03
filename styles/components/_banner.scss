@@ -1,0 +1,54 @@
+.banner {
+    &__image {
+        position: relative !important;
+    }
+
+    &__info {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50rem;
+
+        &-title {
+            color: $main-color;
+            font-size: 4rem;
+            font-weight: 500;
+            padding-bottom: 1rem;
+        }
+
+        &-content {
+            color: $main-color;
+            font-size: 1.6rem;
+            line-height: 1.5;
+            padding-bottom: 1rem;
+        }
+    }
+
+    &__btn {
+        @include flex(center, unset);
+
+        .btn {
+            @include flex(center, center);
+            padding: 0 1.5rem;
+            height: 3.6rem;
+            border-radius: 4px;
+            outline: none;
+            border: 1px solid #00000078;
+            cursor: pointer;
+            background-color: $main-color;
+
+            i {
+                font-size: 2rem;
+                padding-right: 0.5rem;
+            }
+        }
+
+        &-title {
+            font-size: 1.5rem;
+        }
+
+        &--mr {
+            margin-right: 1rem;
+        }
+    }
+}

@@ -1,6 +1,9 @@
 .header {
     @include flex(center, space-between);
     height: 6rem;
+    position: fixed;
+    z-index: 1;
+    width: 120rem;
 
     &__left {
         @include flex(center, unset);

@@ -1,0 +1,43 @@
+.header {
+    @include flex(center, space-between);
+    height: 6rem;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 120rem;
+
+    &__left {
+        @include flex(center, unset);
+    }
+
+    &__right {
+        color: $main-color;
+
+        & i {
+            font-size: 1.8rem;
+            margin-left: 2rem;
+            cursor: pointer;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        margin-left: 3rem;
+
+        &-list {
+            margin-right: 2rem;
+        }
+
+        &-link {
+            font-size: 1.4rem;
+            color: $main-color;
+            opacity: $opacity-70;
+            font-weight: 500;
+        }
+    }
+
+    &--active {
+        color: $main-color;
+        opacity: 1;
+    }
+}

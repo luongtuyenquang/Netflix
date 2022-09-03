@@ -1,0 +1,50 @@
+.movie-card {
+    width: calc((100% / 6) - 2rem);
+    border: 1px solid #00968854;
+
+    &__info {
+        padding: 0 0 1rem 0.5rem;
+        background-color: #1d1d1ddb;
+    }
+
+    &__image {
+        width: 100% !important;
+        height: 20rem !important;
+        transition: all 0.4s ease 0s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &__name-vn,
+    &__name-us {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-right: 0.5rem;
+    }
+
+    &__name-vn {
+        color: #07d5c2;
+        font-size: 1.3rem;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        font-weight: 500;
+        padding-top: 1rem;
+
+        &:hover {
+            color: #18ffea;
+        }
+    }
+
+    &__name-us {
+        color: $main-color;
+        opacity: $opacity-70;
+        font-size: 1.2rem;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

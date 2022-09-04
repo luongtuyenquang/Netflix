@@ -1,10 +1,18 @@
 .header {
-    @include flex(center, space-between);
-    height: 6rem;
+    width: 100%;
+    height: $header-height;
     position: fixed;
     top: 0;
+    left: 0;
     z-index: 1;
-    width: 120rem;
+    transition: height 0.2s linear;
+
+    &__container {
+        @include flex(center, space-between);
+        height: $header-height;
+        width: 120rem;
+        margin: 0 auto;
+    }
 
     &__left {
         @include flex(center, unset);
@@ -33,7 +41,16 @@
             color: $main-color;
             opacity: $opacity-70;
             font-weight: 500;
+
+            &:hover {
+                opacity: 1;
+            }
         }
+    }
+
+    &--scroll {
+        background-color: black;
+        height: $header-height-scroll;
     }
 
     &--active {

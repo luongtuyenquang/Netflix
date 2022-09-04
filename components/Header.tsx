@@ -1,9 +1,20 @@
 import Image from 'next/image'
+import { useEffect } from 'react'
 import logo from '../public/assets/images/logo-netflix.svg'
 
 function Header() {
+    useEffect(() => {
+        const header = document.querySelector('.header')
+
+        const handleScrollHeader = () => {
+            header?.classList.toggle('header--scroll', window.scrollY > 0)
+        }
+
+        window.addEventListener('scroll', handleScrollHeader)
+    }, [])
+
     return (
-        <header className='header'>
+        <header className='header__container'>
             <div className='header__left'>
                 <a href='#1'>
                     <Image src={logo} alt='Logo' width={90} height={30} />

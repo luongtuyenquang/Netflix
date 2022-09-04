@@ -2,8 +2,10 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
 import Banner from '../components/Banner'
-import MoviesList from '../components/MoviesList'
+import MovieCard from '../common/MovieCard'
 import Footer from '../components/Footer'
+import trendingNow from '../store-data/trendingNow'
+import topRated from '../store-data/topRated'
 
 const Home: NextPage = () => {
     return (
@@ -24,11 +26,33 @@ const Home: NextPage = () => {
                     <main className='main'>
                         <section className='movies'>
                             <p className='movies__title'>Trending Now</p>
-                            <MoviesList />
+                            <div className='movies-list'>
+                                {trendingNow.map((item) => {
+                                    return (
+                                        <MovieCard
+                                            image={item.movie.thumb_url}
+                                            name={item.movie.name}
+                                            originName={item.movie.origin_name}
+                                            key={item.movie._id}
+                                        />
+                                    )
+                                })}
+                            </div>
                         </section>
                         <section className='movies'>
                             <p className='movies__title'>Top Rated</p>
-                            <MoviesList />
+                            <div className='movies-list'>
+                                {topRated.map((item) => {
+                                    return (
+                                        <MovieCard
+                                            image={item.movie.thumb_url}
+                                            name={item.movie.name}
+                                            originName={item.movie.origin_name}
+                                            key={item.movie._id}
+                                        />
+                                    )
+                                })}
+                            </div>
                         </section>
                     </main>
                 </div>

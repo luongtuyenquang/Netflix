@@ -1,10 +1,14 @@
 import Image from 'next/image'
-import logo from '../public/assets/images/banner.jpg'
 
 function Banner() {
     return (
         <section className='banner'>
-            <Image src={logo} layout='fill' className='banner__image' alt='banner' />
+            <Image
+                src={'https://img.ophim.cc/uploads/movies/venom-let-there-be-carnage-poster.jpg'}
+                layout='fill'
+                className='banner__image'
+                alt='banner'
+            />
             <div className='banner__info'>
                 <p className='banner__info-title'>Dưới Màn Lửa</p>
                 <p className='banner__info-content'>

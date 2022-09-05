@@ -86,7 +86,7 @@ const trendingNow = [
                 time: '2022-05-31T11:19:00.000Z',
             },
             _id: '623478ed3c735a9a446e31de',
-            name: 'Venom: Let There Be Carnage',
+            name: 'Venom',
             origin_name: 'Venom: Let There Be Carnage',
             content:
                 '<p>Eddie Brock cố gắng thúc đẩy sự nghiệp của mình bằng cách phỏng vấn Killer Killer Kasady, người trở thành chủ nhà của cuộc tàn sát Symbiote và trốn thoát khỏi nhà tù sau khi thực hiện thất bại.</p>',

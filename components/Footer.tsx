@@ -1,13 +1,16 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import logo from '../public/assets/images/logo-netflix.svg'
 
 function Footer() {
     return (
         <section className='footer__container'>
             <div className='footer__item'>
-                <a href='#1'>
-                    <Image src={logo} width='90' height='30' />
-                </a>
+                <Link href='/'>
+                    <a>
+                        <Image src={logo} width='90' height='30' />
+                    </a>
+                </Link>
                 <p className='footer__item-text footer__item--pr-7'>
                     Xem phim mới miễn phí nhanh chất lượng cao. Xem Phim online Việt Sub, Thuyết
                     minh, lồng tiếng chất lượng HD. Xem phim nhanh online chất lượng cao

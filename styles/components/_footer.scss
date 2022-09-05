@@ -1,7 +1,14 @@
 .footer {
     display: flex;
     color: $main-color;
+    background-color: $main-bg;
     padding: 4rem 0;
+
+    &__container {
+        display: flex;
+        width: 120rem;
+        margin: 0 auto;
+    }
 
     &__item {
         width: 25%;

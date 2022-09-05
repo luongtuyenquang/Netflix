@@ -16,53 +16,39 @@ const Home: NextPage = () => {
                 <link rel='icon' href='/favicon.ico' />
             </Head>
 
-            <div className='header'>
-                <Header />
-            </div>
-
-            <div className='container-fluid container-fluid--main'>
-                <div className='container'>
-                    <Banner />
-                    <main className='main'>
-                        <section className='movies'>
-                            <p className='movies__title'>Trending Now</p>
-                            <div className='movies-list'>
-                                {trendingNow.map((item) => {
-                                    return (
-                                        <MovieCard
-                                            image={item.movie.thumb_url}
-                                            name={item.movie.name}
-                                            originName={item.movie.origin_name}
-                                            key={item.movie._id}
-                                        />
-                                    )
-                                })}
-                            </div>
-                        </section>
-                        <section className='movies'>
-                            <p className='movies__title'>Top Rated</p>
-                            <div className='movies-list'>
-                                {topRated.map((item) => {
-                                    return (
-                                        <MovieCard
-                                            image={item.movie.thumb_url}
-                                            name={item.movie.name}
-                                            originName={item.movie.origin_name}
-                                            key={item.movie._id}
-                                        />
-                                    )
-                                })}
-                            </div>
-                        </section>
-                    </main>
-                </div>
-            </div>
-
-            <div className='container-fluid--footer'>
-                <div className='container'>
-                    <Footer />
-                </div>
-            </div>
+            <Banner />
+            <main className='main'>
+                <section className='movies'>
+                    <p className='movies__title'>Trending Now</p>
+                    <div className='movies-list'>
+                        {trendingNow.map((item) => {
+                            return (
+                                <MovieCard
+                                    image={item.movie.thumb_url}
+                                    name={item.movie.name}
+                                    originName={item.movie.origin_name}
+                                    key={item.movie._id}
+                                />
+                            )
+                        })}
+                    </div>
+                </section>
+                <section className='movies'>
+                    <p className='movies__title'>Top Rated</p>
+                    <div className='movies-list'>
+                        {topRated.map((item) => {
+                            return (
+                                <MovieCard
+                                    image={item.movie.thumb_url}
+                                    name={item.movie.name}
+                                    originName={item.movie.origin_name}
+                                    key={item.movie._id}
+                                />
+                            )
+                        })}
+                    </div>
+                </section>
+            </main>
         </div>
     )
 }

@@ -3,7 +3,7 @@ import logo from '../public/assets/images/logo-netflix.svg'
 
 function Footer() {
     return (
-        <section className='footer'>
+        <section className='footer__container'>
             <div className='footer__item'>
                 <a href='#1'>
                     <Image src={logo} width='90' height='30' />

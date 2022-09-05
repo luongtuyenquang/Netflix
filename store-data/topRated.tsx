@@ -10,7 +10,7 @@ const topRated = [
             name: 'Nghề Siêu Dễ',
             origin_name: 'Extremely Easy Job',
             content:
-                '<p>Viên cảnh sát về hưu và một nhóm người lập dị trong khu phố dùng một quán ăn làm bình phong để truy bắt tên trùm tội phạm khó đoán.</p>',
+                'Viên cảnh sát về hưu và một nhóm người lập dị trong khu phố dùng một quán ăn làm bình phong để truy bắt tên trùm tội phạm khó đoán.',
             type: 'single',
             status: 'completed',
             thumb_url: 'https://img.ophim.cc/uploads/movies/nghe-sieu-de-thumb.jpg',
@@ -19,7 +19,7 @@ const topRated = [
             sub_docquyen: 'off',
             chieurap: true,
             trailer_url: '',
-            time: '1g 57phút',
+            time: '117 phút',
             episode_current: 'Full',
             episode_total: '1',
             quality: 'HD',
@@ -39,20 +39,10 @@ const topRated = [
                 ' Lâm Thanh Mỹ',
             ],
             director: ['Võ Thanh Hòa'],
-            category: [
-                {
-                    name: 'Hành Động',
-                },
-                {
-                    name: 'Hài Hước',
-                },
-                {
-                    name: 'Phiêu Lưu',
-                },
-            ],
+            category: ['Hành Động', 'Hài Hước', 'Phiêu Lưu'],
             country: [
                 {
-                    name: 'Quốc Gia Khác',
+                    name: 'Việt Nam',
                 },
             ],
         },
@@ -83,7 +73,7 @@ const topRated = [
             name: 'Chị Chị Em Em',
             origin_name: 'Sister Sister',
             content:
-                '<p>Đây là bộ phim tâm lý, khám phá câu chuyện tình yêu xoay quanh hai người phụ nữ xinh đẹp - Thiên Kim và Bảo Nhi. Đối mặt trong một cuộc chơi mà chỉ có một người chiến thắng, khi hạnh phúc của tổ ấm nhỏ sắp bị bão cuốn đi, ai sẽ quyết liệt đấu tranh cho những gì mình muốn và ai sẽ cam chịu để giữ bình yên?</p>',
+                'Đây là bộ phim tâm lý, khám phá câu chuyện tình yêu xoay quanh hai người phụ nữ xinh đẹp - Thiên Kim và Bảo Nhi. Đối mặt trong một cuộc chơi mà chỉ có một người chiến thắng, khi hạnh phúc của tổ ấm nhỏ sắp bị bão cuốn đi, ai sẽ quyết liệt đấu tranh cho những gì mình muốn và ai sẽ cam chịu để giữ bình yên?',
             type: 'single',
             status: 'completed',
             thumb_url: 'https://img.ophim.cc/uploads/movies/chi-chi-em-em-thumb.jpg',
@@ -103,20 +93,10 @@ const topRated = [
             year: 2019,
             actor: ['Thanh Hằng', 'Chi Pu', 'Lãnh Thanh', 'Kathy Uyen'],
             director: ['Kathy Uyen'],
-            category: [
-                {
-                    name: 'Tình Cảm',
-                },
-                {
-                    name: 'Chính kịch',
-                },
-                {
-                    name: 'Bí ẩn',
-                },
-            ],
+            category: ['Tình Cảm', 'Chính kịch', 'Bí ẩn'],
             country: [
                 {
-                    name: 'Quốc Gia Khác',
+                    name: 'Việt Nam',
                 },
             ],
         },
@@ -147,7 +127,7 @@ const topRated = [
             name: 'Nhím Sonic 2',
             origin_name: 'Sonic the Hedgehog 2',
             content:
-                '<p>Sonic muốn chứng minh rằng anh ấy có những gì cần thiết để trở thành một anh hùng thực sự sau khi chuyển đến Green Hills. Anh ta sẽ nhận được bài kiểm tra của mình khi Tiến sĩ có mặt. Để tìm kiếm một viên ngọc lục bảo huyền bí có sức mạnh hủy diệt nền văn minh, Robotnik và Knuckles đã tham gia cùng một cộng sự mới. Sonic và người bạn đồng hành của mình, Tails, bắt đầu một cuộc hành trình vượt địa cầu để tìm viên ngọc lục bảo trước khi nó rơi vào tay kẻ xấu.</p>',
+                'Sonic muốn chứng minh rằng anh ấy có những gì cần thiết để trở thành một anh hùng thực sự sau khi chuyển đến Green Hills. Anh ta sẽ nhận được bài kiểm tra của mình khi Tiến sĩ có mặt. Để tìm kiếm một viên ngọc lục bảo huyền bí có sức mạnh hủy diệt nền văn minh, Robotnik và Knuckles đã tham gia cùng một cộng sự mới. Sonic và người bạn đồng hành của mình, Tails, bắt đầu một cuộc hành trình vượt địa cầu để tìm viên ngọc lục bảo trước khi nó rơi vào tay kẻ xấu.',
             type: 'hoathinh',
             status: 'completed',
             thumb_url: 'https://img.ophim.cc/uploads/movies/nhim-sonic-2-thumb.jpg',
@@ -171,20 +151,7 @@ const topRated = [
                 'James Marsden',
             ],
             director: ['Jeff Fowler'],
-            category: [
-                {
-                    name: 'Hành Động',
-                },
-                {
-                    name: 'Hài Hước',
-                },
-                {
-                    name: 'Viễn Tưởng',
-                },
-                {
-                    name: 'Gia Đình',
-                },
-            ],
+            category: ['Hành Động', 'Hài Hước', 'Viễn Tưởng', 'Gia Đình'],
             country: [
                 {
                     name: 'Âu Mỹ',
@@ -233,7 +200,7 @@ const topRated = [
             name: 'Aquaman: Đế Vương Atlantis',
             origin_name: 'Aquaman',
             content:
-                '<p>Sau những sự kiện trong Justice League, Arthur Curry / Aquaman trở về biển cả và bắt đầu đảm nhận quyền thừa kế vương quốc Atlantis dưới sự cố vấn của công chúa Mera. Thế nhưng, đế chế huyền thoại bao năm ẩn mình dưới lòng biển sâu Atlantics sắp phải dậy sóng khi Orm quyết tâm thu phục 7 chủng tộc nơi đáy đại dương để tiêu diệt toàn bộ sự sống trên mặt đất.Giữa lúc biển xanh cuộn trào những đợt sóng dữ dội nhất Aquaman sẽ đương đầu với mọi việc như thế nào để bảo vệ quê hương và thế giới?</p>',
+                'Sau những sự kiện trong Justice League, Arthur Curry / Aquaman trở về biển cả và bắt đầu đảm nhận quyền thừa kế vương quốc Atlantis dưới sự cố vấn của công chúa Mera. Thế nhưng, đế chế huyền thoại bao năm ẩn mình dưới lòng biển sâu Atlantics sắp phải dậy sóng khi Orm quyết tâm thu phục 7 chủng tộc nơi đáy đại dương để tiêu diệt toàn bộ sự sống trên mặt đất.Giữa lúc biển xanh cuộn trào những đợt sóng dữ dội nhất Aquaman sẽ đương đầu với mọi việc như thế nào để bảo vệ quê hương và thế giới?',
             type: 'single',
             status: 'completed',
             thumb_url: 'https://img.ophim.cc/uploads/movies/aquaman-de-vuong-atlantis-thumb.jpg',
@@ -250,35 +217,19 @@ const topRated = [
             year: 2018,
             actor: [
                 'Jason Momoa',
-                '  Amber Heard',
-                '  Willem Dafoe',
-                '  Patrick Wilson',
-                '  Nicole Kidman',
-                '  Dolph Lundgren',
-                '  Yahya Abdul-Mateen Ii',
-                '  Temuera Morrison',
-                '  Ludi Lin',
-                '  Michael Beach',
-                '  Randall Park',
-                '  Graham Mctavish',
-                '  Leigh Whannell',
-                '  Djimon Hounsou',
-                '  Sophia Forrest',
-                '  Tainui Kirkwood',
-                '  Tamor',
+                'Amber Heard',
+                'Willem Dafoe',
+                'Patrick Wilson',
+                'Nicole Kidman',
+                'Dolph Lundgren',
+                'Yahya Abdul-Mateen Ii',
+                'Temuera Morrison',
+                'Ludi Lin',
+                'Michael Beach',
+                'Randall Park',
             ],
             director: ['James Wan'],
-            category: [
-                {
-                    name: 'Hành Động',
-                },
-                {
-                    name: 'Viễn Tưởng',
-                },
-                {
-                    name: 'Phiêu Lưu',
-                },
-            ],
+            category: ['Hành Động', 'Viễn Tưởng', 'Phiêu Lưu'],
             country: [
                 {
                     name: 'Âu Mỹ',
@@ -314,7 +265,7 @@ const topRated = [
             name: 'Sinh Vật Huyền Bí: Những Bí Mật Của Thầy Dumbledore',
             origin_name: 'Fantastic Beasts: The Secrets of Dumbledore - Fantasy',
             content:
-                '<p>Chào mừng trở lại thế giới pháp thuật! Hãy cùng nhau khám phá những bí mật, những câu chuyện chưa được kể của thầy Albus Dumbledore và kế hoạch ngăn chặn cuộc nổi loạn của Gellert Grindelwald trong phần 3 Sinh Vật Huyền Bí.</p>',
+                'Chào mừng trở lại thế giới pháp thuật! Hãy cùng nhau khám phá những bí mật, những câu chuyện chưa được kể của thầy Albus Dumbledore và kế hoạch ngăn chặn cuộc nổi loạn của Gellert Grindelwald trong phần 3 Sinh Vật Huyền Bí.',
             type: 'single',
             status: 'completed',
             thumb_url:
@@ -333,17 +284,7 @@ const topRated = [
             year: 2022,
             actor: ['Eddie Redmayne', ' Jude Law', ' Ezra Miller', ' Dan Fogler', ' Alison Sudol'],
             director: ['David Yates'],
-            category: [
-                {
-                    name: 'Viễn Tưởng',
-                },
-                {
-                    name: 'Phiêu Lưu',
-                },
-                {
-                    name: 'Bí ẩn',
-                },
-            ],
+            category: ['Viễn Tưởng', 'Phiêu Lưu', 'Bí ẩn'],
             country: [
                 {
                     name: 'Âu Mỹ',
@@ -396,7 +337,7 @@ const topRated = [
             name: 'Ma Cà Rồng Morbius',
             origin_name: 'Morbius',
             content:
-                '<p>Morbius là bộ phim siêu anh hùng Mỹ ra mắt năm 2022 dựa trên nhân vật cùng tên của Marvel Comics, phim được sản xuất bởi hãng Columbia Pictures phối hợp với Marvel Entertainment. Sony Pictures Releasing đảm nhận vai trò nhà phát hành và bộ phim cũng sẽ là phần phim thứ ba thuộc Sony’s Spider-Man Universe. Sau khi bị mắc một căn bệnh hiếm gặp về máu, vị giáo sư Michael Morbius đã cố gắng tạo một thứ thuốc để tự điều trị cho bản thân mình nhưng cũng vì thứ thuốc đó đã khiến trở thành một dạng ma cà rồng.</p>',
+                'Morbius là bộ phim siêu anh hùng Mỹ ra mắt năm 2022 dựa trên nhân vật cùng tên của Marvel Comics, phim được sản xuất bởi hãng Columbia Pictures phối hợp với Marvel Entertainment. Sony Pictures Releasing đảm nhận vai trò nhà phát hành và bộ phim cũng sẽ là phần phim thứ ba thuộc Sony’s Spider-Man Universe. Sau khi bị mắc một căn bệnh hiếm gặp về máu, vị giáo sư Michael Morbius đã cố gắng tạo một thứ thuốc để tự điều trị cho bản thân mình nhưng cũng vì thứ thuốc đó đã khiến trở thành một dạng ma cà rồng.',
             type: 'single',
             status: 'completed',
             thumb_url: 'https://img.ophim.cc/uploads/movies/morbius-thumb.jpg',
@@ -414,20 +355,7 @@ const topRated = [
             year: 2022,
             actor: ['Jared Leto', 'Matt Smith', 'Adria Arjona', 'Jared Harris', 'Al Madrigal'],
             director: ['Daniel Espinosa'],
-            category: [
-                {
-                    name: 'Hành Động',
-                },
-                {
-                    name: 'Viễn Tưởng',
-                },
-                {
-                    name: 'Kinh Dị',
-                },
-                {
-                    name: 'Bí ẩn',
-                },
-            ],
+            category: ['Hành Động', 'Viễn Tưởng', 'Kinh Dị', 'Bí ẩn'],
             country: [
                 {
                     name: 'Âu Mỹ',

@@ -53,12 +53,7 @@ function MovieSlug() {
                                             Năm sản xuất: <span>{item.movie.year}</span>
                                         </p>
                                         <p className='movie-detail__info-general'>
-                                            Thể loại:{' '}
-                                            <span>
-                                                {item.movie.category.map((types) => {
-                                                    return types.name + ', '
-                                                })}
-                                            </span>
+                                            Thể loại: <span>{item.movie.category.join(', ')}</span>
                                         </p>
                                         <p className='movie-detail__info-general'>
                                             Diễn viên: <span>{item.movie.actor.join(', ')}</span>

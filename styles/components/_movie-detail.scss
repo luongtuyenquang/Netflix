@@ -1,0 +1,97 @@
+.movie-detail {
+    margin-top: $header-height;
+    color: $main-color;
+    padding-top: 3rem;
+    // background-color: $main-bg;
+
+    &__group {
+        @include flex(flex-start, center);
+        background-color: #0000008c;
+        border-radius: 5px;
+        padding: 3rem 0;
+    }
+
+    &__image {
+        &-parent {
+            position: relative;
+            width: 30rem;
+            height: 40rem;
+        }
+
+        &-group {
+            @include flex(center, space-evenly);
+            position: absolute;
+            background-color: #079183;
+            left: 0;
+            right: 0;
+            bottom: 0px;
+            height: 5rem;
+        }
+    }
+    &__info {
+        margin-left: 2rem;
+
+        &-group {
+            padding-bottom: 2rem;
+        }
+
+        &-name {
+            text-transform: uppercase;
+            font-size: 2rem;
+            font-weight: 500;
+            color: $secondary-color;
+            padding-bottom: 0.4rem;
+        }
+
+        &-origin-name {
+            font-size: 1.4rem;
+            opacity: $opacity-70;
+            font-weight: 300;
+        }
+
+        &-general {
+            font-size: 1.3rem;
+            padding-bottom: 1rem;
+
+            & span {
+                color: $secondary-color;
+            }
+        }
+    }
+
+    &__description {
+        padding: 3rem 0;
+        &-title {
+            font-size: 1.7rem;
+            text-transform: uppercase;
+            color: $secondary-color;
+            padding-bottom: 2rem;
+        }
+
+        &-name {
+            font-size: 1.6rem;
+            padding-bottom: 1rem;
+        }
+
+        &-content {
+            font-size: 1.4rem;
+            font-weight: 300;
+            line-height: 1.4;
+            color: #ffffffd9;
+        }
+    }
+
+    &__btn {
+        @include flex(center, center);
+        margin-right: 1rem;
+        width: 50%;
+        border-right: 1px solid black;
+        height: 100%;
+        text-align: center;
+
+        &:last-of-type {
+            margin-right: unset;
+            border: unset;
+        }
+    }
+}

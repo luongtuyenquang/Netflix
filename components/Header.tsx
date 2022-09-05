@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { useEffect } from 'react'
 import logo from '../public/assets/images/logo-netflix.svg'
 
@@ -16,9 +17,11 @@ function Header() {
     return (
         <header className='header__container'>
             <div className='header__left'>
-                <a href='#1'>
-                    <Image src={logo} alt='Logo' width={90} height={30} />
-                </a>
+                <Link href='/'>
+                    <a>
+                        <Image src={logo} alt='Logo' width={90} height={30} />
+                    </a>
+                </Link>
                 <ul className='header__nav'>
                     <li className='header__nav-list'>
                         <a href='#1' className='header__nav-link header--active'>

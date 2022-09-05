@@ -83,7 +83,6 @@
 
     &__btn {
         @include flex(center, center);
-        margin-right: 1rem;
         width: 50%;
         border-right: 1px solid black;
         height: 100%;

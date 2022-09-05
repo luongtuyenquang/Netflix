@@ -1,8 +1,8 @@
 import Image from 'next/image'
 
-function MovieCard({ image, name, originName }) {
+function MovieCard({ image, name, originName, slug }) {
     return (
-        <a href='#1' className='movie-card'>
+        <a href={`/movie/${slug ? slug : ''}`} className='movie-card'>
             {image ? (
                 <Image
                     src={image}

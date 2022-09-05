@@ -1,9 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Header from '../components/Header'
 import Banner from '../components/Banner'
 import MovieCard from '../common/MovieCard'
-import Footer from '../components/Footer'
 import trendingNow from '../store-data/trendingNow'
 import topRated from '../store-data/topRated'
 
@@ -27,6 +25,7 @@ const Home: NextPage = () => {
                                     image={item.movie.thumb_url}
                                     name={item.movie.name}
                                     originName={item.movie.origin_name}
+                                    slug={item.movie.slug}
                                     key={item.movie._id}
                                 />
                             )
@@ -42,6 +41,7 @@ const Home: NextPage = () => {
                                     image={item.movie.thumb_url}
                                     name={item.movie.name}
                                     originName={item.movie.origin_name}
+                                    slug={item.movie.slug}
                                     key={item.movie._id}
                                 />
                             )

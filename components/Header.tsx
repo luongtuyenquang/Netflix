@@ -39,7 +39,7 @@ function Header() {
                         </a>
                     </li>
                     <li className='header__nav-list'>
-                        <a href='#1' className='header__nav-link'>
+                        <a href='/movie/favourite' className='header__nav-link'>
                             Phim yêu thích của tôi
                         </a>
                     </li>

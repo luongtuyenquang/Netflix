@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import trendingNow from '../../store-data/trendingNow'
 import topRated from '../../store-data/topRated'
+import { ButtonLink, ButtonNoLink } from '../../common/Button'
 
 function MovieSlug() {
     const allMovies = trendingNow.concat(topRated)
@@ -18,14 +19,14 @@ function MovieSlug() {
                                     <div className='movie-detail__image-parent'>
                                         <Image src={item.movie.thumb_url} layout='fill' priority />
                                         <div className='movie-detail__image-group'>
-                                            <div className='btn movie-detail__btn'>
-                                                <i className='bx bxs-heart'></i>
+                                            <ButtonNoLink className='movie-detail__btn'>
+                                                <i className='bx bx-heart'></i>
                                                 <span className='banner__btn-title'>Yêu thích</span>
-                                            </div>
-                                            <div className='btn movie-detail__btn'>
-                                                <i className='bx bx-play'></i>
+                                            </ButtonNoLink>
+                                            <ButtonLink href='' className='movie-detail__btn '>
+                                                <i className='bx bx-play movie-detail__btn--size'></i>
                                                 <span className='banner__btn-title'>Watch</span>
-                                            </div>
+                                            </ButtonLink>
                                         </div>
                                     </div>
                                 </div>

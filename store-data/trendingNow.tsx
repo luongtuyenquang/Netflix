@@ -361,6 +361,59 @@ const trendingNow = [
             },
         ],
     },
+    {
+        status: true,
+        msg: '',
+        movie: {
+            modified: {
+                time: '2022-02-25T04:47:13.440Z',
+            },
+            _id: '62185f514e98729b68223bea',
+            name: 'Biệt đội G.I.Joe: Báo thù',
+            origin_name: 'G.I. Joe: Retaliation',
+            content:
+                'Ở phần tiếp theo ngập tràn các pha hành động của G.I. Joe: Cuộc chiến mãng xà, đội chống khủng bố tinh nhuệ bị buộc tội mưu phản bởi tay lính đánh thuê toàn cầu Zartan.',
+            type: 'single',
+            status: 'completed',
+            thumb_url: 'https://img.ophim.cc/uploads/movies/biet-doi-gijoe-bao-thu-thumb.jpg',
+            is_copyright: 'off',
+            trailer_url: '',
+            time: '140 phút',
+            episode_current: 'Full',
+            episode_total: '1',
+            quality: 'HD',
+            lang: 'Vietsub',
+            notify: '',
+            showtimes: '',
+            slug: 'biet-doi-gijoe-bao-thu',
+            year: 2013,
+            actor: ['Dwayne Johnson', 'Channing Tatum', 'Lee Byung Hun'],
+            director: ['Jon M. Chu'],
+            category: ['Hành Động', 'Viễn Tưởng', 'Phiêu Lưu', 'Khoa Học'],
+            country: [
+                {
+                    name: 'Âu Mỹ',
+                },
+            ],
+            chieurap: false,
+            poster_url: '',
+        },
+        episodes: [
+            {
+                server_name: 'Vietsub #1',
+                server_data: [
+                    {
+                        name: 'Full',
+                        slug: 'full',
+                        filename: 'Biệt đội G.I.Joe_ Báo thù',
+                        link_embed:
+                            'https://hd.hdbophim.com/share/5f93f983524def3dca464469d2cf9f3e',
+                        link_m3u8: 'https://hd.hdbophim.com/20220224/110_ca61921a/index.m3u8',
+                    },
+                ],
+            },
+        ],
+    },
 ]
 
 export default trendingNow

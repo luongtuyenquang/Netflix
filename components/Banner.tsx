@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import trendingNow from '../store-data/trendingNow'
 import { ButtonLink } from '../common/Button'
@@ -8,12 +7,10 @@ function Banner() {
 
     return (
         <section className='banner'>
-            <Image
-                src={venomMovie.movie.poster_url}
-                layout='fill'
-                className='banner__image'
-                alt='banner'
-            />
+            <div className='banner__image'>
+                <img src={venomMovie.movie.poster_url} alt='banner' />
+            </div>
+
             <div className='banner__info'>
                 <p className='banner__info-title'>{venomMovie.movie.name}</p>
                 <p className='banner__info-content'>{venomMovie.movie.content}</p>

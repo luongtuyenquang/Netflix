@@ -3,3 +3,9 @@
     align-items: $align-item;
     justify-content: $justify-content;
 }
+
+@mixin grid($colums, $width, $gap) {
+    display: grid;
+    grid-template-columns: repeat($colums, $width);
+    grid-gap: $gap;
+}

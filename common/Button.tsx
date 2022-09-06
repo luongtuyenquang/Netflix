@@ -1,9 +1,11 @@
 import Link from 'next/link'
 
-export function ButtonLink({ children, href, className }) {
+export function ButtonLink({ children, href, className, target, rel }) {
     return (
         <Link href={href}>
-            <a className={className}>{children}</a>
+            <a className={className} target={target} rel={rel}>
+                {children}
+            </a>
         </Link>
     )
 }

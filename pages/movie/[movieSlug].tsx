@@ -23,7 +23,12 @@ function MovieSlug() {
                                                 <i className='bx bx-heart'></i>
                                                 <span className='banner__btn-title'>Yêu thích</span>
                                             </ButtonNoLink>
-                                            <ButtonLink href='' className='movie-detail__btn '>
+                                            <ButtonLink
+                                                href={item.episodes[0].server_data[0].link_embed}
+                                                className='movie-detail__btn '
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                            >
                                                 <i className='bx bx-play movie-detail__btn--size'></i>
                                                 <span className='banner__btn-title'>Watch</span>
                                             </ButtonLink>

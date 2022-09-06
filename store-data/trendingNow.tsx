@@ -88,7 +88,13 @@ const trendingNow = [
             showtimes: '',
             slug: 'venom-let-there-be-carnage',
             year: 2021,
-            actor: [''],
+            actor: [
+                'Tom Holland',
+                'Tom Hardy',
+                'Woody Harrelson',
+                'Naomie Harris',
+                'Michelle Williams',
+            ],
             director: ['Andy Serkis'],
             category: ['Hành Động', 'Viễn Tưởng', 'Khoa Học', 'Kinh Dị'],
             country: [

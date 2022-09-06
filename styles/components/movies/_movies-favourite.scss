@@ -1,0 +1,44 @@
+.movies-favourite {
+    margin-top: $header-height;
+    padding-bottom: 3rem;
+
+    &__list {
+        @include grid(6, 1fr, 3rem 2rem);
+    }
+
+    &__close {
+        @include flex(center, center);
+        position: absolute;
+        top: 0;
+        right: 0;
+        color: white;
+        font-size: 2.3rem;
+        background-color: #16a194;
+        width: 3.5rem;
+        height: 3.2rem;
+        border-bottom-left-radius: 7px;
+        display: none;
+        animation: slideLeft linear 0.2s;
+    }
+
+    &__empty {
+        color: #ffffffd1;
+        text-align: center;
+        width: $width-container;
+        font-size: 1.5rem;
+        padding-top: 2rem;
+    }
+}
+
+.movie-card:hover .movies-favourite__close {
+    display: flex;
+}
+
+@keyframes slideLeft {
+    from {
+        right: -3.5rem;
+    }
+    to {
+        right: 0;
+    }
+}

@@ -1,12 +1,20 @@
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import { useDispatch, useSelector } from 'react-redux'
 import trendingNow from '../../store-data/trendingNow'
 import topRated from '../../store-data/topRated'
 import { ButtonLink, ButtonNoLink } from '../../common/Button'
+import { addMovieFavourite } from '../../redux/moviesSlice'
 
 function MovieSlug() {
-    const allMovies = trendingNow.concat(topRated)
     const router = useRouter()
+    const dispatch = useDispatch()
+    const allMovies = trendingNow.concat(topRated)
+    const movies = useSelector((state) => state.movies)
+
+    const handleAddMovieFavourite = (_id, image, name, origin_name) => {
+        dispatch(addMovieFavourite({ _id, image, name, origin_name }))
+    }
 
     return (
         <>
@@ -19,7 +27,17 @@ function MovieSlug() {
                                     <div className='movie-detail__image-parent'>
                                         <Image src={item.movie.thumb_url} layout='fill' priority />
                                         <div className='movie-detail__image-group'>
-                                            <ButtonNoLink className='movie-detail__btn'>
+                                            <ButtonNoLink
+                                                className='movie-detail__btn'
+                                                onClick={() =>
+                                                    handleAddMovieFavourite(
+                                                        item.movie._id,
+                                                        item.movie.thumb_url,
+                                                        item.movie.name,
+                                                        item.movie.origin_name
+                                                    )
+                                                }
+                                            >
                                                 <i className='bx bx-heart'></i>
                                                 <span className='banner__btn-title'>Yêu thích</span>
                                             </ButtonNoLink>

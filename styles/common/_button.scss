@@ -1,0 +1,25 @@
+.btn {
+    @include flex(center, center);
+    padding: 0 1.5rem;
+    height: 3.6rem;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid #7a7575e3;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #232526 0%, #414345 51%, #232526 100%);
+    background-size: 200% auto;
+    transition: 0.3s;
+    color: #25ffeb;
+    font-size: 1.4rem;
+
+    &:hover {
+        border: 1px solid $secondary-color;
+        background-position: right center;
+        color: $main-color;
+    }
+
+    i {
+        font-size: 2rem;
+        padding-right: 0.5rem;
+    }
+}

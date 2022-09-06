@@ -25,27 +25,22 @@ function Header() {
                 <ul className='header__nav'>
                     <li className='header__nav-list'>
                         <a href='#1' className='header__nav-link header--active'>
-                            Home
+                            Trang chủ
                         </a>
                     </li>
                     <li className='header__nav-list'>
                         <a href='#1' className='header__nav-link'>
-                            TV Shows
+                            Tất cả phim
                         </a>
                     </li>
                     <li className='header__nav-list'>
                         <a href='#1' className='header__nav-link'>
-                            Movies
+                            Phim bộ
                         </a>
                     </li>
                     <li className='header__nav-list'>
                         <a href='#1' className='header__nav-link'>
-                            New & Popular
-                        </a>
-                    </li>
-                    <li className='header__nav-list'>
-                        <a href='#1' className='header__nav-link'>
-                            My List
+                            Phim yêu thích của tôi
                         </a>
                     </li>
                 </ul>

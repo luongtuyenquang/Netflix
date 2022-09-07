@@ -14,9 +14,13 @@ const movieSlice = createSlice({
                 state.splice(index, 1)
             }
         },
+        deleteMovieFavourite: (state, action) => {
+            index = state.findIndex((item) => item._id === action.payload)
+            state.splice(index, 1)
+        },
     },
 })
 
 const { reducer, actions } = movieSlice
-export const { addMovieFavourite } = actions
+export const { addMovieFavourite, deleteMovieFavourite } = actions
 export default reducer

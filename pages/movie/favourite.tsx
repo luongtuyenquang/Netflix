@@ -1,23 +1,27 @@
-import allMovies from '../../store-data/allMovies'
 import MovieCard from '../../common/MovieCard'
+import { useSelector } from 'react-redux'
 
 function MoviesFavourite() {
+    const movies = useSelector((state) => state.movies)
+
     return (
         <section className='movies-favourite'>
             <p className='movies__title'>Danh sách các bộ phim yêu thích</p>
             <div className='movies-favourite__list'>
-                {allMovies.length === 0 ? (
+                {movies.length === 0 ? (
                     <p className='movies-favourite__empty'>
                         Không có phim yêu thích trong danh sách !
                     </p>
                 ) : (
-                    allMovies.map((item) => {
+                    movies.map((movie) => {
                         return (
                             <MovieCard
-                                image={item.movie.thumb_url}
-                                name={item.movie.name}
-                                originName={item.movie.origin_name}
-                                key={item.movie._id}
+                                id={movie._id}
+                                image={movie.thumb_url}
+                                name={movie.name}
+                                originName={movie.origin_name}
+                                slug={movie.slug}
+                                key={movie._id}
                             />
                         )
                     })

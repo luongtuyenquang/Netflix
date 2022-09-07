@@ -1,9 +1,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { useEffect } from 'react'
+import { useSelector } from 'react-redux'
 import logo from '../public/assets/images/logo-netflix.svg'
 
 function Header() {
+    const movies = useSelector((state) => state.movies)
+
     useEffect(() => {
         const header = document.querySelector('.header')
 
@@ -24,9 +27,9 @@ function Header() {
                 </Link>
                 <ul className='header__nav'>
                     <li className='header__nav-list'>
-                        <a href='#1' className='header__nav-link header--active'>
-                            Trang chủ
-                        </a>
+                        <Link href='/'>
+                            <a className='header__nav-link header--active'>Trang chủ</a>
+                        </Link>
                     </li>
                     <li className='header__nav-list'>
                         <a href='#1' className='header__nav-link'>
@@ -39,9 +42,16 @@ function Header() {
                         </a>
                     </li>
                     <li className='header__nav-list'>
-                        <a href='/movie/favourite' className='header__nav-link'>
-                            Phim yêu thích của tôi
-                        </a>
+                        <Link href='/movie/favourite'>
+                            <a
+                                className={`header__nav-link ${
+                                    movies.length === 0 ? '' : 'header__nav-link--relative'
+                                }`}
+                            >
+                                Phim yêu thích của tôi{' '}
+                                <span>{movies.length === 0 ? '' : movies.length}</span>
+                            </a>
+                        </Link>
                     </li>
                 </ul>
             </div>

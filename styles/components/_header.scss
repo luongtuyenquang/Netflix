@@ -39,11 +39,30 @@
         &-link {
             font-size: 1.4rem;
             color: $main-color;
-            opacity: $opacity-70;
             font-weight: 500;
+            transition: color linear 0.15s;
 
             &:hover {
-                opacity: 1;
+                color: $secondary-color;
+            }
+
+            &--relative {
+                position: relative;
+
+                & span {
+                    @include flex(center, center);
+                    position: absolute;
+                    top: -10px;
+                    background-color: #d53737;
+                    border-radius: 50%;
+                    z-index: 111111111111;
+                    color: white;
+                    right: -26px;
+                    filter: drop-shadow(2px 3px 6px black);
+                    width: 23px;
+                    height: 23px;
+                    font-size: 1.3rem;
+                }
             }
         }
     }

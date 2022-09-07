@@ -8,18 +8,21 @@ import { addMovieFavourite } from '../../redux/moviesSlice'
 
 function MovieSlug() {
     const router = useRouter()
+    const movieSlug = router.query.movieSlug
     const dispatch = useDispatch()
     const allMovies = trendingNow.concat(topRated)
     const movies = useSelector((state) => state.movies)
 
-    const handleAddMovieFavourite = (_id, image, name, origin_name) => {
-        dispatch(addMovieFavourite({ _id, image, name, origin_name }))
+    const handleAddMovieFavourite = (_id, thumb_url, name, origin_name, slug) => {
+        dispatch(addMovieFavourite({ _id, thumb_url, name, origin_name, slug }))
     }
+
+    const isFavourite = movies.some((movie) => movie.slug === movieSlug)
 
     return (
         <>
             {allMovies.map((item) => {
-                if (router.query.movieSlug === item.movie.slug) {
+                if (movieSlug === item.movie.slug) {
                     return (
                         <section className='movie-detail' key={item.movie._id}>
                             <div className='movie-detail__group'>
@@ -28,18 +31,27 @@ function MovieSlug() {
                                         <Image src={item.movie.thumb_url} layout='fill' priority />
                                         <div className='movie-detail__image-group'>
                                             <ButtonNoLink
-                                                className='movie-detail__btn'
+                                                className={`movie-detail__btn ${
+                                                    isFavourite ? 'movie-detail__btn--disable' : ''
+                                                }`}
                                                 onClick={() =>
                                                     handleAddMovieFavourite(
                                                         item.movie._id,
                                                         item.movie.thumb_url,
                                                         item.movie.name,
-                                                        item.movie.origin_name
+                                                        item.movie.origin_name,
+                                                        item.movie.slug
                                                     )
                                                 }
                                             >
-                                                <i className='bx bx-heart'></i>
-                                                <span className='banner__btn-title'>Yêu thích</span>
+                                                <i
+                                                    className={`${
+                                                        isFavourite ? 'bx bx-x' : 'bx bx-heart'
+                                                    }`}
+                                                ></i>
+                                                <span className='banner__btn-title'>
+                                                    {isFavourite ? 'Hủy yêu thích' : 'Yêu thích'}
+                                                </span>
                                             </ButtonNoLink>
                                             <ButtonLink
                                                 href={item.episodes[0].server_data[0].link_embed}

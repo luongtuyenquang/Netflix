@@ -8,7 +8,7 @@
         @include flex(flex-start, center);
         background-color: #0000008c;
         border-radius: 5px;
-        padding: 3rem 0;
+        padding: 3rem 13rem 3rem 20rem;
     }
 
     &__image {
@@ -55,6 +55,7 @@
 
             & span {
                 color: $secondary-color;
+                line-height: 1.4;
             }
         }
     }
@@ -103,6 +104,15 @@
 
         & i {
             padding-right: 0.5rem;
+        }
+
+        &--disable {
+            background-color: #464646;
+            color: #dddbdb;
+
+            &:hover {
+                background-color: #262626;
+            }
         }
 
         &--size {

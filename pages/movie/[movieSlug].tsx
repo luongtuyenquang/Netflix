@@ -2,24 +2,22 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import trendingNow from '../../store-data/trendingNow'
-import topRated from '../../store-data/topRated'
 import { ButtonLink, ButtonNoLink } from '../../common/Button'
 import { addMovieFavourite } from '../../redux/moviesSlice'
 import headerScroll from '../../common/HeaderScroll'
+import { allMovies } from '../../store-data/allMovies'
 
 function MovieSlug() {
     const router = useRouter()
     const movieSlug = router.query.movieSlug
     const dispatch = useDispatch()
-    const allMovies = trendingNow.concat(topRated)
     const movies = useSelector((state) => state.movies)
 
     const handleAddMovieFavourite = (_id, thumb_url, name, origin_name, slug) => {
         dispatch(addMovieFavourite({ _id, thumb_url, name, origin_name, slug }))
     }
 
-    const isFavourite = movies.some((movie) => movie.slug === movieSlug)
+    const indexMovieFavourite = movies.some((movie) => movie.slug === movieSlug)
 
     useEffect(() => {
         const header = document.querySelector('.header')
@@ -39,7 +37,9 @@ function MovieSlug() {
                                         <div className='movie-detail__image-group'>
                                             <ButtonNoLink
                                                 className={`movie-detail__btn ${
-                                                    isFavourite ? 'movie-detail__btn--disable' : ''
+                                                    indexMovieFavourite
+                                                        ? 'movie-detail__btn--disable'
+                                                        : ''
                                                 }`}
                                                 onClick={() =>
                                                     handleAddMovieFavourite(
@@ -53,11 +53,15 @@ function MovieSlug() {
                                             >
                                                 <i
                                                     className={`${
-                                                        isFavourite ? 'bx bx-x' : 'bx bx-heart'
+                                                        indexMovieFavourite
+                                                            ? 'bx bx-x'
+                                                            : 'bx bx-heart'
                                                     }`}
                                                 ></i>
                                                 <span className='banner__btn-title'>
-                                                    {isFavourite ? 'Hủy yêu thích' : 'Yêu thích'}
+                                                    {indexMovieFavourite
+                                                        ? 'Hủy yêu thích'
+                                                        : 'Yêu thích'}
                                                 </span>
                                             </ButtonNoLink>
                                             <ButtonLink

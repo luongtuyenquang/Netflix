@@ -1,21 +1,26 @@
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import logo from '../public/assets/images/logo-netflix.svg'
+import headerScroll from '../common/HeaderScroll'
 
 function Header() {
     const movies = useSelector((state) => state.movies)
+    const router = useRouter()
 
     useEffect(() => {
         const header = document.querySelector('.header')
+
+        headerScroll(header, router.pathname, '/', 'transparent')
 
         const handleScrollHeader = () => {
             header?.classList.toggle('header--scroll', window.scrollY > 0)
         }
 
         window.addEventListener('scroll', handleScrollHeader)
-    }, [])
+    }, [router])
 
     return (
         <header className='header__container'>

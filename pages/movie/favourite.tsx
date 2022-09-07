@@ -1,8 +1,17 @@
 import MovieCard from '../../common/MovieCard'
 import { useSelector } from 'react-redux'
+import { useEffect } from 'react'
+import { useRouter } from 'next/router'
+import headerScroll from '../../common/HeaderScroll'
 
 function MoviesFavourite() {
+    const router = useRouter()
     const movies = useSelector((state) => state.movies)
+
+    useEffect(() => {
+        const header = document.querySelector('.header')
+        headerScroll(header, router.pathname, '/movie/favourite', 'black')
+    }, [])
 
     return (
         <section className='movies-favourite'>

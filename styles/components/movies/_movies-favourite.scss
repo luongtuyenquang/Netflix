@@ -1,6 +1,7 @@
 .movies-favourite {
-    margin-top: $header-height;
-    padding-bottom: 3rem;
+    margin-top: calc($header-height - 1rem);
+    padding-bottom: 4rem;
+    padding-top: 2rem;
 
     &__list {
         @include grid(6, 1fr, 3rem 2rem);

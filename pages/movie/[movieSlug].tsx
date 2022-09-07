@@ -1,10 +1,12 @@
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import trendingNow from '../../store-data/trendingNow'
 import topRated from '../../store-data/topRated'
 import { ButtonLink, ButtonNoLink } from '../../common/Button'
 import { addMovieFavourite } from '../../redux/moviesSlice'
+import headerScroll from '../../common/HeaderScroll'
 
 function MovieSlug() {
     const router = useRouter()
@@ -18,6 +20,11 @@ function MovieSlug() {
     }
 
     const isFavourite = movies.some((movie) => movie.slug === movieSlug)
+
+    useEffect(() => {
+        const header = document.querySelector('.header')
+        headerScroll(header, router.pathname, router.pathname, 'black')
+    }, [])
 
     return (
         <>

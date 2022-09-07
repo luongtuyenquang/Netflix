@@ -42,9 +42,9 @@ function Header() {
                         </Link>
                     </li>
                     <li className='header__nav-list'>
-                        <a href='#1' className='header__nav-link'>
-                            Phim bộ
-                        </a>
+                        <Link href='/movie/series'>
+                            <a className='header__nav-link'>Phim bộ</a>
+                        </Link>
                     </li>
                     <li className='header__nav-list'>
                         <Link href='/movie/favourite'>

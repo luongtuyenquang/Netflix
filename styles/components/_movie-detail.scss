@@ -1,7 +1,7 @@
 .movie-detail {
     margin-top: calc($header-height - 1rem);
     color: $main-color;
-    padding-top: 5rem;
+    padding-top: 4rem;
 
     &__group {
         @include flex(flex-start, center);

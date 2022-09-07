@@ -1,11 +1,12 @@
 import { useRouter } from 'next/router'
 import Image from 'next/image'
+import Link from 'next/link'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { ButtonLink, ButtonNoLink } from '../../common/Button'
 import { addMovieFavourite } from '../../redux/moviesSlice'
 import headerScroll from '../../common/HeaderScroll'
-import { allMovies } from '../../store-data/allMovies'
+import allMovies from '../../store-data/allMovies'
 
 function MovieSlug() {
     const router = useRouter()
@@ -111,6 +112,29 @@ function MovieSlug() {
                                     </div>
                                 </div>
                             </div>
+                            {console.log(item.episodes[0].server_data[0].slug != 'full')}
+                            {item.episodes[0].server_data[0].slug != 'full' ? (
+                                <div className='movie-series__group'>
+                                    <p className='movie-series__title'>Tập phim: </p>
+                                    <Link href='#1'>
+                                        <a className='movie-series__btn'>Tập 1</a>
+                                    </Link>
+                                    <Link href='#1'>
+                                        <a className='movie-series__btn'>Tập 2</a>
+                                    </Link>
+                                    <Link href='#1'>
+                                        <a className='movie-series__btn'>Tập 3</a>
+                                    </Link>
+                                    <Link href='#1'>
+                                        <a className='movie-series__btn'>Tập 4</a>
+                                    </Link>
+                                    <Link href='#1'>
+                                        <a className='movie-series__btn'>Tập 5</a>
+                                    </Link>
+                                </div>
+                            ) : (
+                                ''
+                            )}
                             <div className='movie-detail__description'>
                                 <p className='movie-detail__description-title'>Nội dung phim:</p>
                                 <p className='movie-detail__description-name'>

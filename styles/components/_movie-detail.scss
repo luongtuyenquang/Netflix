@@ -1,8 +1,7 @@
 .movie-detail {
-    margin-top: $header-height;
+    margin-top: calc($header-height - 1rem);
     color: $main-color;
-    padding-top: 3rem;
-    // background-color: $main-bg;
+    padding-top: 5rem;
 
     &__group {
         @include flex(flex-start, center);

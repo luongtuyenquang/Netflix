@@ -68,7 +68,7 @@
     }
 
     &--scroll {
-        background-color: $main-bg;
+        background-color: $main-bg !important;
         height: $header-height-scroll;
     }
 

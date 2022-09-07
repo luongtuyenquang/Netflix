@@ -37,9 +37,9 @@ function Header() {
                         </Link>
                     </li>
                     <li className='header__nav-list'>
-                        <a href='#1' className='header__nav-link'>
-                            Tất cả phim
-                        </a>
+                        <Link href='/all'>
+                            <a className='header__nav-link'>Tất cả phim</a>
+                        </Link>
                     </li>
                     <li className='header__nav-list'>
                         <a href='#1' className='header__nav-link'>

@@ -17,7 +17,7 @@ const Home: NextPage = () => {
             <Banner />
             <main className='main'>
                 <section className='movies'>
-                    <p className='movies__title'>Trending Now</p>
+                    <p className='movies__title'>Đang là xu hướng</p>
                     <div className='movies-list'>
                         {trendingNow.map((item) => {
                             return (
@@ -33,7 +33,7 @@ const Home: NextPage = () => {
                     </div>
                 </section>
                 <section className='movies'>
-                    <p className='movies__title'>Top Rated</p>
+                    <p className='movies__title'>Tỉ lệ xem cao nhất</p>
                     <div className='movies-list'>
                         {topRated.map((item) => {
                             return (

@@ -1,0 +1,34 @@
+.movie-series {
+    margin-top: calc($header-height - 1rem);
+    padding: 2rem 0 3rem;
+
+    &__list {
+        @include grid(6, 1fr, 3rem 2rem);
+    }
+
+    &__group {
+        @include flex(center, center);
+        padding: 1rem 0;
+        background-color: #282828;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+    }
+
+    &__btn {
+        @include flex(center, unset);
+        height: 3.2rem;
+        background-color: #464545;
+        margin-left: 1rem;
+        padding: 0 1rem;
+        font-size: 1.4rem;
+        border-radius: 4px;
+        color: #ffffffe8;
+
+        &:hover {
+            background-color: #099184;
+            color: $main-color;
+        }
+    }
+}

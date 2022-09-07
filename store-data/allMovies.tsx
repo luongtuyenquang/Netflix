@@ -1,6 +1,7 @@
 import trendingNow from './trendingNow'
 import topRated from './topRated'
+import movieSeries from './movieSeries'
 
-export const allMovies = [...trendingNow, ...topRated]
+const allMovies = [...trendingNow, ...topRated, ...movieSeries]
 
-export const shuffleAllMovies = allMovies.sort((a, b) => b.movie.year - a.movie.year)
+export default allMovies

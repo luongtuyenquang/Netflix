@@ -7,8 +7,9 @@ import logo from '../public/assets/images/logo-netflix.svg'
 import headerScroll from '../common/HeaderScroll'
 
 function Header() {
-    const movies = useSelector((state) => state.movies)
     const router = useRouter()
+    const movies = useSelector((state) => state.movies)
+    const activeLink = (url, pathName) => (url === pathName ? 'header--active' : '')
 
     useEffect(() => {
         const header = document.querySelector('.header')
@@ -33,17 +34,33 @@ function Header() {
                 <ul className='header__nav'>
                     <li className='header__nav-list'>
                         <Link href='/'>
-                            <a className='header__nav-link header--active'>Trang chủ</a>
+                            <a className={`header__nav-link ${activeLink('/', router.pathname)}`}>
+                                Trang chủ
+                            </a>
                         </Link>
                     </li>
                     <li className='header__nav-list'>
                         <Link href='/all'>
-                            <a className='header__nav-link'>Tất cả phim</a>
+                            <a
+                                className={`header__nav-link ${activeLink(
+                                    '/all',
+                                    router.pathname
+                                )}`}
+                            >
+                                Tất cả phim
+                            </a>
                         </Link>
                     </li>
                     <li className='header__nav-list'>
                         <Link href='/movie/series'>
-                            <a className='header__nav-link'>Phim bộ</a>
+                            <a
+                                className={`header__nav-link ${activeLink(
+                                    '/movie/series',
+                                    router.pathname
+                                )}`}
+                            >
+                                Phim bộ
+                            </a>
                         </Link>
                     </li>
                     <li className='header__nav-list'>
@@ -51,7 +68,7 @@ function Header() {
                             <a
                                 className={`header__nav-link ${
                                     movies.length === 0 ? '' : 'header__nav-link--relative'
-                                }`}
+                                } ${activeLink('/movie/favourite', router.pathname)}`}
                             >
                                 Phim yêu thích của tôi{' '}
                                 <span>{movies.length === 0 ? '' : movies.length}</span>

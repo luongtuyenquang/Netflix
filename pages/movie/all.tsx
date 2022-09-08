@@ -5,7 +5,7 @@ import headerScroll from '../../common/HeaderScroll'
 import MovieCard from '../../common/MovieCard'
 import allMovies from '../../store-data/allMovies'
 
-function AllMovies() {
+const AllMovies: React.FC = () => {
     const router = useRouter()
     const shuffleAllMovies = allMovies.sort((a, b) => b.movie.year - a.movie.year)
 

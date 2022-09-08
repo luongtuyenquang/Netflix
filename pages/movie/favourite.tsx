@@ -7,7 +7,7 @@ import MovieCard from '../../common/MovieCard'
 import { RootState } from '../../redux/store'
 import MovieFavouriteTS from '../../interface/movieFavourite'
 
-function MoviesFavourite() {
+const MoviesFavourite: React.FC = () => {
     const router = useRouter()
     const movies = useSelector<RootState, MovieFavouriteTS[]>((state) => state.movies)
 

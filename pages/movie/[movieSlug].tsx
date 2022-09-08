@@ -10,7 +10,7 @@ import movieSeries from '../../store-data/movieSeries'
 import MovieFavouriteTS from '../../interface/movieFavourite'
 import { RootState } from '../../redux/store'
 
-function MovieSlug() {
+const MovieSlug: React.FC = () => {
     const router = useRouter()
     const movieSlug = router.query.movieSlug
     const dispatch = useDispatch()

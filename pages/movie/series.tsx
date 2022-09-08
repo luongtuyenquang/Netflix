@@ -5,7 +5,7 @@ import headerScroll from '../../common/HeaderScroll'
 import MovieCard from '../../common/MovieCard'
 import movieSeries from '../../store-data/movieSeries'
 
-function MovieSeries() {
+const MovieSeries: React.FC = () => {
     const router = useRouter()
 
     useEffect(() => {

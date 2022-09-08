@@ -6,7 +6,7 @@ import '../styles/index.scss'
 import store, { persistor } from '../redux/store'
 import Layout from '../common/Layout'
 
-function MyApp({ Component, pageProps }: AppProps) {
+const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
     return (
         <>
             <Head>

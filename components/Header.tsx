@@ -8,7 +8,7 @@ import headerScroll from '../common/HeaderScroll'
 import MovieFavouriteTS from './../interface/movieFavourite'
 import { RootState } from '../redux/store'
 
-function Header() {
+const Header: React.FC = () => {
     const router = useRouter()
     const movies = useSelector<RootState, MovieFavouriteTS[]>((state) => state.movies)
 

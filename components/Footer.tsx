@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import logo from '../public/assets/images/logo-netflix.svg'
+import { ButtonLink } from '../common/Button'
 
-function Footer() {
+const Footer: React.FC = () => {
     return (
         <section className='footer__container'>
             <div className='footer__item'>
@@ -40,13 +41,13 @@ function Footer() {
                 </p>
                 <p className='footer__item-text'>
                     Facebook:
-                    <a
+                    <ButtonLink
                         href='https://www.facebook.com/fb.luongtuyenquang'
-                        target='_blank'
                         className='footer__item--bold'
+                        target='_blank'
                     >
                         Lương Tuyên Quang
-                    </a>
+                    </ButtonLink>
                 </p>
             </div>
         </section>

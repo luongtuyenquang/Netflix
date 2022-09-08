@@ -5,16 +5,24 @@ import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import logo from '../public/assets/images/logo-netflix.svg'
 import headerScroll from '../common/HeaderScroll'
+import MovieFavouriteTS from './../interface/movieFavourite'
+import { RootState } from '../redux/store'
 
 function Header() {
     const router = useRouter()
-    const movies = useSelector((state) => state.movies)
-    const activeLink = (url, pathName) => (url === pathName ? 'header--active' : '')
+    const movies = useSelector<RootState, MovieFavouriteTS[]>((state) => state.movies)
+
+    const activeLink = (url: string, pathName: string) => (url === pathName ? 'header--active' : '')
 
     useEffect(() => {
-        const header = document.querySelector('.header')
+        const header = document.querySelector('.header') as HTMLElement
 
-        headerScroll(header, router.pathname, '/', 'transparent')
+        headerScroll({
+            header: header,
+            pathName: router.pathname,
+            pathNameUrl: '/',
+            color: 'transparent',
+        })
 
         const handleScrollHeader = () => {
             header?.classList.toggle('header--scroll', window.scrollY > 0)
@@ -40,10 +48,10 @@ function Header() {
                         </Link>
                     </li>
                     <li className='header__nav-list'>
-                        <Link href='/all'>
+                        <Link href='/movie/all'>
                             <a
                                 className={`header__nav-link ${activeLink(
-                                    '/all',
+                                    '/movie/all',
                                     router.pathname
                                 )}`}
                             >

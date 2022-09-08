@@ -4,14 +4,22 @@ import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import headerScroll from '../../common/HeaderScroll'
 import MovieCard from '../../common/MovieCard'
+import { RootState } from '../../redux/store'
+import MovieFavouriteTS from '../../interface/movieFavourite'
 
 function MoviesFavourite() {
     const router = useRouter()
-    const movies = useSelector((state) => state.movies)
+    const movies = useSelector<RootState, MovieFavouriteTS[]>((state) => state.movies)
 
     useEffect(() => {
-        const header = document.querySelector('.header')
-        headerScroll(header, router.pathname, '/movie/favourite', 'black')
+        const header = document.querySelector('.header') as HTMLElement
+
+        headerScroll({
+            header: header,
+            pathName: router.pathname,
+            pathNameUrl: '/movie/favourite',
+            color: 'black',
+        })
     }, [])
 
     return (

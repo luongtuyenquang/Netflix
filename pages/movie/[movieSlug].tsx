@@ -7,6 +7,7 @@ import { ButtonLink, ButtonNoLink } from '../../common/Button'
 import { addMovieFavourite } from '../../redux/moviesSlice'
 import headerScroll from '../../common/HeaderScroll'
 import allMovies from '../../store-data/allMovies'
+import movieSeries from '../../store-data/movieSeries'
 
 function MovieSlug() {
     const router = useRouter()
@@ -19,6 +20,7 @@ function MovieSlug() {
     }
 
     const indexMovieFavourite = movies.some((movie) => movie.slug === movieSlug)
+    const isMovieSeries = movieSeries.some((item) => item.movie.slug === movieSlug)
 
     useEffect(() => {
         const header = document.querySelector('.header')
@@ -112,25 +114,22 @@ function MovieSlug() {
                                     </div>
                                 </div>
                             </div>
-                            {console.log(item.episodes[0].server_data[0].slug != 'full')}
-                            {item.episodes[0].server_data[0].slug != 'full' ? (
+                            {isMovieSeries ? (
                                 <div className='movie-series__group'>
                                     <p className='movie-series__title'>Tập phim: </p>
-                                    <Link href='#1'>
-                                        <a className='movie-series__btn'>Tập 1</a>
-                                    </Link>
-                                    <Link href='#1'>
-                                        <a className='movie-series__btn'>Tập 2</a>
-                                    </Link>
-                                    <Link href='#1'>
-                                        <a className='movie-series__btn'>Tập 3</a>
-                                    </Link>
-                                    <Link href='#1'>
-                                        <a className='movie-series__btn'>Tập 4</a>
-                                    </Link>
-                                    <Link href='#1'>
-                                        <a className='movie-series__btn'>Tập 5</a>
-                                    </Link>
+                                    {item.episodes[0].server_data.map((item, index) => {
+                                        return (
+                                            <ButtonLink
+                                                href={item.link_embed}
+                                                className='movie-series__btn'
+                                                target='_blank'
+                                                rel='noopener noreferrer'
+                                                key={index}
+                                            >
+                                                Tập {index + 1}
+                                            </ButtonLink>
+                                        )
+                                    })}
                                 </div>
                             ) : (
                                 ''

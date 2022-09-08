@@ -1,3 +1,4 @@
+import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import headerScroll from '../common/HeaderScroll'
@@ -14,22 +15,28 @@ function AllMovies() {
     }, [])
 
     return (
-        <section className='all-movies'>
-            <p className='movies__title'>Danh sách tất cả phim hiện có</p>
-            <div className='all-movies__list'>
-                {shuffleAllMovies.map((item) => {
-                    return (
-                        <MovieCard
-                            image={item.movie.thumb_url}
-                            name={item.movie.name}
-                            originName={item.movie.origin_name}
-                            slug={item.movie.slug}
-                            key={item.movie._id}
-                        />
-                    )
-                })}
-            </div>
-        </section>
+        <>
+            <Head>
+                <title>Netflix - Tất cả phim</title>
+            </Head>
+
+            <section className='all-movies'>
+                <p className='movies__title'>Danh sách tất cả phim hiện có</p>
+                <div className='all-movies__list'>
+                    {shuffleAllMovies.map((item) => {
+                        return (
+                            <MovieCard
+                                image={item.movie.thumb_url}
+                                name={item.movie.name}
+                                originName={item.movie.origin_name}
+                                slug={item.movie.slug}
+                                key={item.movie._id}
+                            />
+                        )
+                    })}
+                </div>
+            </section>
+        </>
     )
 }
 

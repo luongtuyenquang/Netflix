@@ -1,8 +1,7 @@
-import Link from 'next/link'
 import trendingNow from '../store-data/trendingNow'
 import { ButtonLink } from '../common/Button'
 
-function Banner() {
+const Banner: React.FC = () => {
     const venomMovie = trendingNow[1]
 
     return (

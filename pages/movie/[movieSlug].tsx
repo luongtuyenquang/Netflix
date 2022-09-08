@@ -1,6 +1,5 @@
 import { useRouter } from 'next/router'
 import Image from 'next/image'
-import Link from 'next/link'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { ButtonLink, ButtonNoLink } from '../../common/Button'
@@ -8,14 +7,22 @@ import { addMovieFavourite } from '../../redux/moviesSlice'
 import headerScroll from '../../common/HeaderScroll'
 import allMovies from '../../store-data/allMovies'
 import movieSeries from '../../store-data/movieSeries'
+import MovieFavouriteTS from '../../interface/movieFavourite'
+import { RootState } from '../../redux/store'
 
 function MovieSlug() {
     const router = useRouter()
     const movieSlug = router.query.movieSlug
     const dispatch = useDispatch()
-    const movies = useSelector((state) => state.movies)
+    const movies = useSelector<RootState, MovieFavouriteTS[]>((state) => state.movies)
 
-    const handleAddMovieFavourite = (_id, thumb_url, name, origin_name, slug) => {
+    const handleAddMovieFavourite = ({
+        _id,
+        thumb_url,
+        name,
+        origin_name,
+        slug,
+    }: MovieFavouriteTS) => {
         dispatch(addMovieFavourite({ _id, thumb_url, name, origin_name, slug }))
     }
 
@@ -23,8 +30,14 @@ function MovieSlug() {
     const isMovieSeries = movieSeries.some((item) => item.movie.slug === movieSlug)
 
     useEffect(() => {
-        const header = document.querySelector('.header')
-        headerScroll(header, router.pathname, router.pathname, 'black')
+        const header = document.querySelector('.header') as HTMLElement
+
+        headerScroll({
+            header: header,
+            pathName: router.pathname,
+            pathNameUrl: router.pathname,
+            color: 'black',
+        })
     }, [])
 
     return (
@@ -45,13 +58,13 @@ function MovieSlug() {
                                                         : ''
                                                 }`}
                                                 onClick={() =>
-                                                    handleAddMovieFavourite(
-                                                        item.movie._id,
-                                                        item.movie.thumb_url,
-                                                        item.movie.name,
-                                                        item.movie.origin_name,
-                                                        item.movie.slug
-                                                    )
+                                                    handleAddMovieFavourite({
+                                                        _id: item.movie._id,
+                                                        thumb_url: item.movie.thumb_url,
+                                                        name: item.movie.name,
+                                                        origin_name: item.movie.origin_name,
+                                                        slug: item.movie.slug,
+                                                    })
                                                 }
                                             >
                                                 <i

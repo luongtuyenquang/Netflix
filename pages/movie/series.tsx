@@ -9,8 +9,14 @@ function MovieSeries() {
     const router = useRouter()
 
     useEffect(() => {
-        const header = document.querySelector('.header')
-        headerScroll(header, router.pathname, '/movie/series', 'black')
+        const header = document.querySelector('.header') as HTMLElement
+
+        headerScroll({
+            header: header,
+            pathName: router.pathname,
+            pathNameUrl: '/movie/series',
+            color: 'black',
+        })
     }, [])
 
     return (

@@ -1,14 +1,16 @@
 import Link from 'next/link'
+import { MouseEvent } from 'react'
 import { useRouter } from 'next/router'
 import { useDispatch } from 'react-redux'
 import { ButtonNoLink } from './Button'
 import { deleteMovieFavourite } from '../redux/moviesSlice'
+import MovieCardTS from '../interface/movieCard'
 
-function MovieCard({ id, image, name, originName, slug }) {
+const MovieCard: React.FC<MovieCardTS> = ({ id, image, name, originName, slug }) => {
     const router = useRouter()
     const dispatch = useDispatch()
 
-    const handleDeleteMovieFavourite = (e, id) => {
+    const handleDeleteMovieFavourite = (e: MouseEvent, id: string) => {
         e.preventDefault()
         dispatch(deleteMovieFavourite(id))
     }
@@ -26,7 +28,9 @@ function MovieCard({ id, image, name, originName, slug }) {
                 {router.pathname === '/movie/favourite' ? (
                     <ButtonNoLink
                         className='movies-favourite__close'
-                        onClick={(e) => handleDeleteMovieFavourite(e, id)}
+                        onClick={(e: MouseEvent<HTMLDivElement>) =>
+                            id && handleDeleteMovieFavourite(e, id)
+                        }
                     >
                         <i className='bx bx-x'></i>
                     </ButtonNoLink>

@@ -1,17 +1,23 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
-import headerScroll from '../common/HeaderScroll'
-import MovieCard from '../common/MovieCard'
-import allMovies from '../store-data/allMovies'
+import headerScroll from '../../common/HeaderScroll'
+import MovieCard from '../../common/MovieCard'
+import allMovies from '../../store-data/allMovies'
 
 function AllMovies() {
     const router = useRouter()
     const shuffleAllMovies = allMovies.sort((a, b) => b.movie.year - a.movie.year)
 
     useEffect(() => {
-        const header = document.querySelector('.header')
-        headerScroll(header, router.pathname, '/all', 'black')
+        const header = document.querySelector('.header') as HTMLElement
+
+        headerScroll({
+            header: header,
+            pathName: router.pathname,
+            pathNameUrl: '/movie/all',
+            color: 'black',
+        })
     }, [])
 
     return (

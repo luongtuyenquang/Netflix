@@ -9,6 +9,10 @@
         & img {
             height: 100%;
             width: 100%;
+
+            @include max-1023() {
+                object-fit: cover;
+            }
         }
     }
 
@@ -17,6 +21,24 @@
         top: 50%;
         transform: translateY(-50%);
         width: 50rem;
+
+        @include from-1024-1299() {
+            width: $width-container-tablet;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        @include max-1023() {
+            @include flex(center, unset);
+            width: $width-container-mobile;
+            transform: unset;
+            top: unset;
+            bottom: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            flex-direction: column;
+            text-align: center;
+        }
 
         &-title {
             color: $main-color;

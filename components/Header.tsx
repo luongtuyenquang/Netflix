@@ -31,6 +31,41 @@ const Header: React.FC = () => {
         window.addEventListener('scroll', handleScrollHeader)
     }, [router])
 
+    useEffect(() => {
+        const header = document.querySelector('.header') as HTMLElement
+        const iconOpen = document.querySelector('.header__open') as HTMLElement
+        const iconClose = document.querySelector('.header__close') as HTMLElement
+        const nav = document.querySelector('.header__nav') as HTMLElement
+        const headerLeft = document.querySelector('.header__left') as HTMLElement
+        const navLink = document.querySelectorAll('.header__nav-link')
+
+        function openHeader() {
+            header.classList.add('playing')
+            nav.classList.add('header__nav--mobile')
+            headerLeft.classList.add('header__left--mobile')
+            document.body.style.overflow = 'hidden'
+        }
+
+        function closeHeader() {
+            header.classList.remove('playing')
+            nav.classList.remove('header__nav--mobile')
+            headerLeft.classList.remove('header__left--mobile')
+            document.body.style.overflow = 'visible'
+        }
+
+        navLink.forEach((item) => {
+            item.addEventListener('click', closeHeader)
+        })
+
+        iconOpen?.addEventListener('click', openHeader)
+        iconClose?.addEventListener('click', closeHeader)
+
+        return () => {
+            iconOpen?.removeEventListener('click', openHeader)
+            iconClose?.removeEventListener('click', closeHeader)
+        }
+    }, [])
+
     return (
         <header className='header__container'>
             <div className='header__left'>
@@ -85,10 +120,12 @@ const Header: React.FC = () => {
                     </li>
                 </ul>
             </div>
-            <div className='header__right'>
+            {/* <div className='header__right'>
                 <i className='bx bx-search'></i>
                 <i className='bx bxs-bell'></i>
-            </div>
+            </div> */}
+            <i className='bx bx-x header__close'></i>
+            <i className='bx bx-menu-alt-right header__open'></i>
         </header>
     )
 }

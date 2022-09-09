@@ -1,3 +1,11 @@
 .movies-list {
     @include grid(6, 1fr, 3rem 2rem);
+
+    @include from-768-1023() {
+        @include grid(4, 1fr, 3rem 2rem);
+    }
+
+    @include max-767() {
+        @include grid(2, 1fr, 2rem 1.5rem);
+    }
 }

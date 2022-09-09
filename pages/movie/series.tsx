@@ -24,9 +24,9 @@ const MovieSeries: React.FC = () => {
             <Head>
                 <title>Netflix - Phim bộ</title>
             </Head>
-            <section className='movie-series'>
+            <section className='all-movies'>
                 <p className='movies__title'>Danh sách phim bộ hiện có</p>
-                <div className='movie-series__list'>
+                <div className='movies-list'>
                     {movieSeries.map((item) => {
                         return (
                             <MovieCard

@@ -28,9 +28,9 @@ const MoviesFavourite: React.FC = () => {
                 <title>Netflix - Phim yêu thích</title>
             </Head>
 
-            <section className='movies-favourite'>
+            <section className='all-movies'>
                 <p className='movies__title'>Danh sách các bộ phim yêu thích</p>
-                <div className='movies-favourite__list'>
+                <div className='movies-list'>
                     {movies.length === 0 ? (
                         <p className='movies-favourite__empty'>
                             Không có phim yêu thích trong danh sách !

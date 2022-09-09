@@ -12,6 +12,10 @@
         border-bottom-left-radius: 7px;
         display: none;
         animation: slideLeft linear 0.2s;
+
+        @include max-1023() {
+            display: flex;
+        }
     }
 
     &__empty {
@@ -20,6 +24,10 @@
         width: $width-container;
         font-size: 1.5rem;
         padding-top: 2rem;
+
+        @include max-1299() {
+            width: 28.3rem;
+        }
     }
 }
 

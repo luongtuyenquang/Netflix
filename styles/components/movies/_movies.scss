@@ -11,5 +11,9 @@
         @include max-767() {
             padding-top: 2rem;
         }
+
+        & span {
+            color: $secondary-color;
+        }
     }
 }

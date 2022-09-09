@@ -32,6 +32,19 @@ body {
 .main {
     margin-top: 100vh;
     padding-bottom: 2rem;
+
+    @include max-1299() {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @include from-1024-1299() {
+        width: $width-container-tablet;
+    }
+
+    @include max-1023() {
+        width: $width-container-mobile;
+    }
 }
 
 ul {

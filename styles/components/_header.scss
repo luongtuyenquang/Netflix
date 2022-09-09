@@ -13,8 +13,12 @@
         width: $width-container;
         margin: 0 auto;
 
+        @include from-1024-1299() {
+            width: $width-container-tablet;
+        }
+
         @include max-1023() {
-            width: 93%;
+            width: $width-container-mobile;
         }
     }
 

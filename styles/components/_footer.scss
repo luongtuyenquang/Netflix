@@ -4,29 +4,61 @@
     background-color: $main-bg;
     padding: 4rem 0;
 
-    @include max-767() {
-        display: none;
-    }
-
     &__container {
         display: flex;
         width: $width-container;
         margin: 0 auto;
+
+        @include from-1024-1299() {
+            width: $width-container-tablet;
+        }
+
+        @include from-768-1023() {
+            width: $width-container-mobile;
+            flex-wrap: wrap;
+        }
+
+        @include max-767() {
+            width: $width-container-mobile;
+            flex-direction: column;
+        }
     }
 
     &__item {
         width: 25%;
+
+        @include from-768-1023() {
+            width: 50%;
+            margin-bottom: 2rem;
+        }
+
+        @include max-767() {
+            width: 100%;
+            margin-bottom: 2rem;
+
+            &:last-of-type {
+                margin-bottom: unset;
+            }
+        }
 
         &-title {
             font-size: 1.5rem;
             text-transform: uppercase;
             padding-bottom: 1.7rem;
             color: $secondary-color;
+
+            @include max-767() {
+                font-size: 1.6rem;
+            }
         }
 
         &-text {
             font-size: 1.4rem;
             margin-bottom: 1rem;
+
+            @include max-767() {
+                font-size: 1.5rem;
+            }
 
             & a {
                 padding-left: 0.5rem;

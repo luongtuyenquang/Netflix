@@ -7,5 +7,9 @@
         font-weight: 500;
         padding-top: 3rem;
         padding-bottom: 2rem;
+
+        @include max-767() {
+            padding-top: 2rem;
+        }
     }
 }

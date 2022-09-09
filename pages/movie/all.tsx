@@ -28,7 +28,7 @@ const AllMovies: React.FC = () => {
 
             <section className='all-movies'>
                 <p className='movies__title'>Danh sách tất cả phim hiện có</p>
-                <div className='all-movies__list'>
+                <div className='movies-list'>
                     {shuffleAllMovies.map((item) => {
                         return (
                             <MovieCard

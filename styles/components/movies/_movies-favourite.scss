@@ -1,11 +1,4 @@
 .movies-favourite {
-    margin-top: calc($header-height - 1rem);
-    padding: 2rem 0 3rem;
-
-    &__list {
-        @include grid(6, 1fr, 3rem 2rem);
-    }
-
     &__close {
         @include flex(center, center);
         position: absolute;

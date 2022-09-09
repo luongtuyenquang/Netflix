@@ -2,7 +2,9 @@
     margin-top: calc($header-height - 1rem);
     padding: 2rem 0 3rem;
 
-    &__list {
-        @include grid(6, 1fr, 3rem 2rem);
+    @include from-1024-1299() {
+        width: $width-container-tablet;
+        margin-right: auto;
+        margin-left: auto;
     }
 }

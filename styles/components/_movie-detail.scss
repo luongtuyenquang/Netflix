@@ -88,6 +88,7 @@
         &-movie {
             @include max-1023() {
                 padding-left: 2rem;
+                padding-right: 1rem;
             }
         }
 
@@ -118,6 +119,10 @@
             @include max-1023() {
                 text-align: center;
                 padding-bottom: 2rem;
+            }
+
+            @include max-767() {
+                line-height: 1.4;
             }
         }
 

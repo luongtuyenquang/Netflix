@@ -9,3 +9,21 @@
     grid-template-columns: repeat($colums, $width);
     grid-gap: $gap;
 }
+
+@mixin max-1023() {
+    @media only screen and (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin from-768-1023() {
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        @content;
+    }
+}
+
+@mixin max-767() {
+    @media only screen and (max-width: 767px) {
+        @content;
+    }
+}

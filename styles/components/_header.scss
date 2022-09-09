@@ -12,10 +12,31 @@
         height: $header-height;
         width: $width-container;
         margin: 0 auto;
+
+        @include max-1023() {
+            width: 93%;
+        }
     }
 
     &__left {
         @include flex(center, unset);
+
+        &--mobile {
+            animation: slideOpenLeft 0.15s linear;
+
+            @include max-1023() {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                align-items: flex-start;
+                flex-direction: column;
+                background-color: black;
+                padding-top: 16px;
+                padding-left: 13.125px;
+            }
+        }
     }
 
     &__right {
@@ -32,8 +53,23 @@
         display: flex;
         margin-left: 3rem;
 
+        @include max-1023() {
+            display: none;
+            flex-direction: column;
+            margin-left: unset;
+            margin-top: 2rem;
+        }
+
+        &--mobile {
+            display: flex;
+        }
+
         &-list {
             margin-right: 2rem;
+
+            @include max-1023() {
+                margin-bottom: 3rem;
+            }
         }
 
         &-link {
@@ -41,6 +77,11 @@
             color: $main-color;
             font-weight: 500;
             transition: color linear 0.15s;
+
+            @include max-1023() {
+                font-size: 1.7rem;
+                transition: unset;
+            }
 
             &:hover {
                 color: $secondary-color;
@@ -67,6 +108,24 @@
         }
     }
 
+    &__open,
+    &__close {
+        display: none;
+        position: absolute;
+        color: white;
+        top: 3rem;
+        transform: translateY(-50%);
+        right: -0.2rem;
+        font-size: 3rem;
+        padding: 1rem;
+    }
+
+    &__open {
+        @include max-1023() {
+            display: block;
+        }
+    }
+
     &--scroll {
         background-color: $main-bg !important;
         height: $header-height-scroll;
@@ -74,5 +133,21 @@
 
     &--active {
         color: $secondary-color;
+    }
+}
+
+.header.playing .header__open {
+    display: none;
+}
+.header.playing .header__close {
+    display: block;
+}
+
+@keyframes slideOpenLeft {
+    from {
+        right: 35%;
+    }
+    to {
+        right: 0;
     }
 }

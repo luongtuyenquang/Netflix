@@ -18,6 +18,10 @@
         transform: translateY(-50%);
         width: 50rem;
 
+        @include max-767() {
+            width: 100%;
+        }
+
         &-title {
             color: $main-color;
             font-size: 4rem;

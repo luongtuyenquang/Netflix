@@ -4,6 +4,10 @@
     background-color: $main-bg;
     padding: 4rem 0;
 
+    @include max-767() {
+        display: none;
+    }
+
     &__container {
         display: flex;
         width: $width-container;

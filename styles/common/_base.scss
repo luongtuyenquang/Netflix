@@ -23,6 +23,10 @@ body {
     max-width: $width-container;
     margin: 0 auto;
 
+    @include max-1023() {
+        width: $width-container-mobile;
+    }
+
     &-fluid {
         width: 100%;
         background-color: #000000f5;
@@ -40,10 +44,6 @@ body {
 
     @include from-1024-1299() {
         width: $width-container-tablet;
-    }
-
-    @include max-1023() {
-        width: $width-container-mobile;
     }
 }
 

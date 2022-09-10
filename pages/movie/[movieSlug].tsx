@@ -162,6 +162,11 @@ const MovieSlug: React.FC = () => {
                     )
                 }
             })}
+            <div className='toastify'>
+                <i className='bx bx-check toastify__icon-check'></i>
+                <p className='toastify__message'>Đã thêm vào mục yêu thích !</p>
+                <i className='bx bx-x toastify__icon-close'></i>
+            </div>
         </>
     )
 }

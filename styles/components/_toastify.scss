@@ -1,0 +1,38 @@
+.toastify {
+    @include flex(center, unset);
+    background-color: #3c3c3c;
+    position: fixed;
+    top: $header-height;
+    right: 1rem;
+    width: 28rem;
+    height: 6rem;
+    padding-left: 1rem;
+
+    &__message {
+        color: $main-color;
+        font-size: 1.4rem;
+        padding-left: 0.5rem;
+    }
+
+    &__icon-check,
+    &__icon-close {
+        font-size: 2.5rem;
+    }
+
+    &__icon-check {
+        color: #08c908;
+    }
+
+    &__icon-close {
+        position: absolute;
+        top: 3px;
+        right: 3px;
+        cursor: pointer;
+        color: $main-color;
+        transition: color 0.2s;
+
+        &:hover {
+            color: #e52828;
+        }
+    }
+}

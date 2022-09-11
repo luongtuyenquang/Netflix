@@ -9,12 +9,15 @@ import allMovies from '../../store-data/allMovies'
 import movieSeries from '../../store-data/movieSeries'
 import MovieFavouriteTS from '../../interface/movieFavourite'
 import { RootState } from '../../redux/store'
+import Toastify from '../../common/Toastify'
 
 const MovieSlug: React.FC = () => {
     const router = useRouter()
     const movieSlug = router.query.movieSlug
     const dispatch = useDispatch()
     const movies = useSelector<RootState, MovieFavouriteTS[]>((state) => state.movies)
+    const indexMovieFavourite = movies.some((movie) => movie.slug === movieSlug)
+    const isMovieSeries = movieSeries.some((item) => item.movie.slug === movieSlug)
 
     const handleAddMovieFavourite = ({
         _id,
@@ -25,9 +28,6 @@ const MovieSlug: React.FC = () => {
     }: MovieFavouriteTS) => {
         dispatch(addMovieFavourite({ _id, thumb_url, name, origin_name, slug }))
     }
-
-    const indexMovieFavourite = movies.some((movie) => movie.slug === movieSlug)
-    const isMovieSeries = movieSeries.some((item) => item.movie.slug === movieSlug)
 
     useEffect(() => {
         const header = document.querySelector('.header') as HTMLElement
@@ -42,6 +42,13 @@ const MovieSlug: React.FC = () => {
 
     return (
         <>
+            {indexMovieFavourite ? (
+                <Toastify
+                    isIndex={indexMovieFavourite}
+                    icon={'bx bx-check'}
+                    message={'Đã thêm vào phim yêu thích !'}
+                />
+            ) : null}
             {allMovies.map((item) => {
                 if (movieSlug === item.movie.slug) {
                     return (
@@ -162,11 +169,6 @@ const MovieSlug: React.FC = () => {
                     )
                 }
             })}
-            <div className='toastify'>
-                <i className='bx bx-check toastify__icon-check'></i>
-                <p className='toastify__message'>Đã thêm vào mục yêu thích !</p>
-                <i className='bx bx-x toastify__icon-close'></i>
-            </div>
         </>
     )
 }

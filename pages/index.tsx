@@ -6,6 +6,9 @@ import trendingNow from '../store-data/trendingNow'
 import topRated from '../store-data/topRated'
 
 const Home: NextPage = () => {
+    const sortTrendingNow = trendingNow.sort((a, b) => b.movie.year - a.movie.year)
+    const sortTopRated = topRated.sort((a, b) => b.movie.year - a.movie.year)
+
     return (
         <>
             <Head>
@@ -17,7 +20,7 @@ const Home: NextPage = () => {
                 <section className='movies'>
                     <p className='movies__title'>Đang là xu hướng</p>
                     <div className='movies-list'>
-                        {trendingNow.map((item) => {
+                        {sortTrendingNow.map((item) => {
                             return (
                                 <MovieCard
                                     image={item.movie.thumb_url}
@@ -30,10 +33,11 @@ const Home: NextPage = () => {
                         })}
                     </div>
                 </section>
+                <div className='line'></div>
                 <section className='movies'>
                     <p className='movies__title'>Tỉ lệ xem cao nhất</p>
                     <div className='movies-list'>
-                        {topRated.map((item) => {
+                        {sortTopRated.map((item) => {
                             return (
                                 <MovieCard
                                     image={item.movie.thumb_url}

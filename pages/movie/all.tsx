@@ -4,10 +4,11 @@ import { useEffect } from 'react'
 import headerScroll from '../../common/HeaderScroll'
 import MovieCard from '../../common/MovieCard'
 import allMovies from '../../store-data/allMovies'
+import SearchMovie from '../../components/SearchMovie'
 
 const AllMovies: React.FC = () => {
     const router = useRouter()
-    const shuffleAllMovies = allMovies.sort((a, b) => b.movie.year - a.movie.year)
+    const sortAllMovies = allMovies.sort((a, b) => b.movie.year - a.movie.year)
 
     useEffect(() => {
         const header = document.querySelector('.header') as HTMLElement
@@ -27,11 +28,12 @@ const AllMovies: React.FC = () => {
             </Head>
 
             <section className='all-movies'>
-                <p className='movies__title'>
-                    Hiện đang có tất cả <span>{shuffleAllMovies.length}</span> bộ phim
+                <SearchMovie />
+                <p className='movies__title search-movie--pt-4'>
+                    Hiện đang có tất cả <span>{sortAllMovies.length}</span> bộ phim
                 </p>
                 <div className='movies-list'>
-                    {shuffleAllMovies.map((item) => {
+                    {sortAllMovies.map((item) => {
                         return (
                             <MovieCard
                                 image={item.movie.thumb_url}

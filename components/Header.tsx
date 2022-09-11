@@ -38,12 +38,14 @@ const Header: React.FC = () => {
         const nav = document.querySelector('.header__nav') as HTMLElement
         const headerLeft = document.querySelector('.header__left') as HTMLElement
         const navLink = document.querySelectorAll('.header__nav-link')
+        const search = document.querySelector('.search-movie')
 
         function openHeader() {
             header.classList.add('playing')
             nav.classList.add('header__nav--mobile')
             headerLeft.classList.add('header__left--mobile')
             document.body.style.overflow = 'hidden'
+            search?.classList.add('search-movie--none')
         }
 
         function closeHeader() {
@@ -51,6 +53,7 @@ const Header: React.FC = () => {
             nav.classList.remove('header__nav--mobile')
             headerLeft.classList.remove('header__left--mobile')
             document.body.style.overflow = 'visible'
+            search?.classList.remove('search-movie--none')
         }
 
         navLink.forEach((item) => {

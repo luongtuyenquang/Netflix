@@ -1,7 +1,44 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import allMovies from '../store-data/allMovies'
+import removeVietNameseTones from '../common/removeVietNameseTones'
 
-const SearchMovie: React.FC = () => {
-    const inputRef = useRef<HTMLInputElement>(null)
+const SearchMovie: React.FC = ({ setSortAllMovies }) => {
+    const inputRef = useRef()
+    const [valueInput, setValueInput] = useState('')
+
+    const handleResetValue = () => {
+        setValueInput('')
+        setSortAllMovies(allMovies)
+        inputRef.current.focus()
+    }
+
+    useEffect(() => {
+        const elmInput = inputRef.current
+
+        elmInput.onkeyup = (e) => {
+            if (e.which === 13) {
+                const resultSearch = allMovies.filter((item) => {
+                    return (
+                        item.movie.name.toLowerCase().includes(valueInput.toLowerCase()) ||
+                        item.movie.category
+                            .join(', ')
+                            .toLowerCase()
+                            .includes(valueInput.toLowerCase()) ||
+                        removeVietNameseTones(item.movie.name.toLowerCase()).includes(
+                            valueInput.toLowerCase()
+                        ) ||
+                        removeVietNameseTones(
+                            item.movie.category.join(', ').toLowerCase()
+                        ).includes(valueInput.toLowerCase())
+                    )
+                })
+                setSortAllMovies(resultSearch)
+            }
+            if (valueInput === '') {
+                setSortAllMovies(allMovies)
+            }
+        }
+    }, [valueInput])
 
     useEffect(() => {
         const search = document.querySelector('.search-movie')
@@ -25,7 +62,7 @@ const SearchMovie: React.FC = () => {
     }, [])
 
     return (
-        <form className='search-movie'>
+        <div className='search-movie'>
             <i
                 className='bx bx-search search-movie__icon'
                 onClick={() => inputRef?.current?.focus()}
@@ -35,9 +72,13 @@ const SearchMovie: React.FC = () => {
                 placeholder='Nhập tên phim, thể loại...'
                 className='search-movie__input'
                 ref={inputRef}
+                value={valueInput}
+                onChange={(e) => setValueInput(e.target.value)}
             />
-            <i className='bx bx-x search-movie__clear'></i>
-        </form>
+            {valueInput !== '' ? (
+                <i className='bx bx-x search-movie__clear' onClick={handleResetValue}></i>
+            ) : null}
+        </div>
     )
 }
 

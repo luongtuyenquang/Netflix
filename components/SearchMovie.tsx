@@ -1,15 +1,18 @@
-import { useEffect, useRef, useState } from 'react'
+import { Dispatch, MutableRefObject, SetStateAction, useEffect, useRef, useState } from 'react'
 import allMovies from '../store-data/allMovies'
 import removeVietNameseTones from '../common/removeVietNameseTones'
+import MovieTS from '../interface/movie'
 
-const SearchMovie: React.FC = ({ setSortAllMovies }) => {
-    const inputRef = useRef()
+const SearchMovie: React.FC<{ setSortAllMovies: Dispatch<SetStateAction<MovieTS[]>> }> = ({
+    setSortAllMovies,
+}) => {
+    const inputRef = useRef() as MutableRefObject<HTMLInputElement>
     const [valueInput, setValueInput] = useState('')
 
     const handleResetValue = () => {
         setValueInput('')
         setSortAllMovies(allMovies)
-        inputRef.current.focus()
+        inputRef.current?.focus()
     }
 
     useEffect(() => {

@@ -35,17 +35,23 @@ const AllMovies: React.FC = () => {
                     Hiện đang có tất cả <span>{sortAllMovies.length}</span> bộ phim
                 </p>
                 <div className='movies-list'>
-                    {sortAllMovies.map((item) => {
-                        return (
-                            <MovieCard
-                                image={item.movie.thumb_url}
-                                name={item.movie.name}
-                                originName={item.movie.origin_name}
-                                slug={item.movie.slug}
-                                key={item.movie._id}
-                            />
-                        )
-                    })}
+                    {sortAllMovies.length === 0 ? (
+                        <p className='movies-favourite__empty'>
+                            Không có tìm thấy phim trong danh sách !
+                        </p>
+                    ) : (
+                        sortAllMovies.map((item) => {
+                            return (
+                                <MovieCard
+                                    image={item.movie.thumb_url}
+                                    name={item.movie.name}
+                                    originName={item.movie.origin_name}
+                                    slug={item.movie.slug}
+                                    key={item.movie._id}
+                                />
+                            )
+                        })
+                    )}
                 </div>
             </section>
         </>

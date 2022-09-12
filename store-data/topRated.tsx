@@ -462,23 +462,7 @@ const topRated = [
             year: 2018,
             actor: ['Dwayne Johnson', ' Neve Campbell', ' Pablo Schreiber'],
             director: ['Rawson Thurber'],
-            category: [
-                {
-                    name: 'Hành Động',
-                },
-                {
-                    name: 'Viễn Tưởng',
-                },
-                {
-                    name: 'Phiêu Lưu',
-                },
-                {
-                    name: 'Khoa Học',
-                },
-                {
-                    name: 'Kinh Dị',
-                },
-            ],
+            category: ['Hành Động', 'Viễn Tưởng', 'Phiêu Lưu', 'Khoa Học', 'Kinh Dị'],
             country: [
                 {
                     name: 'Âu Mỹ',

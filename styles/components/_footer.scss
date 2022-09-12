@@ -25,6 +25,8 @@
     }
 
     &__item {
+        display: flex;
+        flex-direction: column;
         width: 25%;
 
         @include from-768-1023() {
@@ -55,18 +57,39 @@
         &-text {
             font-size: 1.4rem;
             margin-bottom: 1rem;
+            width: fit-content;
+            transition: 0.2s;
 
             @include max-767() {
                 font-size: 1.5rem;
             }
 
+            &:hover {
+                color: $secondary-color;
+            }
+
             & a {
                 padding-left: 0.5rem;
+            }
+
+            &--unhover {
+                &:hover {
+                    color: unset;
+                }
             }
         }
 
         &--bold {
             color: $secondary-color;
+        }
+
+        &--fb {
+            transition: 0.3s;
+
+            &:hover {
+                color: #ff2f76;
+                padding-left: 0.7rem;
+            }
         }
 
         &--pr-7 {

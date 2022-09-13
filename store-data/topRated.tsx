@@ -151,7 +151,7 @@ const topRated = [
                 'James Marsden',
             ],
             director: ['Jeff Fowler'],
-            category: ['Hành Động', 'Hài Hước', 'Viễn Tưởng', 'Gia Đình'],
+            category: ['Hành Động', 'Hài Hước', 'Viễn Tưởng', 'Gia Đình', 'Hoạt Hình'],
             country: [
                 {
                     name: 'Âu Mỹ',
@@ -636,7 +636,7 @@ const topRated = [
             year: 2021,
             actor: ['Minami Hamabe', ' Megumi Hayashibara', ' Rikiya Koyama'],
             director: ['Tomoka Nagaoka'],
-            category: ['Hành Động', 'Hình Sự', 'Phiêu Lưu', 'Bí ẩn'],
+            category: ['Hành Động', 'Hình Sự', 'Phiêu Lưu', 'Bí ẩn', 'Hoạt Hình'],
             country: [
                 {
                     name: 'Nhật Bản',
@@ -702,7 +702,7 @@ const topRated = [
                 'Ōtani Ikue',
             ],
             director: ['Kodama Kanetsugu'],
-            category: ['Hành Động', 'Hài Hước', 'Kinh Dị', 'Gia Đình'],
+            category: ['Hành Động', 'Hài Hước', 'Kinh Dị', 'Gia Đình', 'Hoạt Hình'],
             country: [
                 {
                     name: 'Nhật Bản',
@@ -765,7 +765,7 @@ const topRated = [
                 'Ōtani Ikue',
             ],
             director: ['Kodama Kanetsugu'],
-            category: ['Hành Động', 'Kinh Dị', 'Gia Đình'],
+            category: ['Hành Động', 'Kinh Dị', 'Gia Đình', 'Hoạt Hình'],
             country: [
                 {
                     name: 'Nhật Bản',
@@ -828,7 +828,7 @@ const topRated = [
                 'Ōtani Ikue',
             ],
             director: ['Kodama Kanetsugu'],
-            category: ['Hành Động', 'Kinh Dị', 'Gia Đình'],
+            category: ['Hành Động', 'Kinh Dị', 'Gia Đình', 'Hoạt Hình'],
             country: [
                 {
                     name: 'Nhật Bản',

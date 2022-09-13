@@ -20,9 +20,9 @@ const Footer: React.FC = () => {
             </div>
             <div className='footer__item'>
                 <p className='footer__item-title'>Phim mới</p>
-                {footerLink.newMovie.map((item) => {
+                {footerLink.newMovie.map((item, index) => {
                     return (
-                        <Link href={item.link}>
+                        <Link href={item.link} key={index}>
                             <a className={item.className}>{item.name}</a>
                         </Link>
                     )
@@ -30,9 +30,9 @@ const Footer: React.FC = () => {
             </div>
             <div className='footer__item'>
                 <p className='footer__item-title'>Phim lẻ</p>
-                {footerLink.singleMovie.map((item) => {
+                {footerLink.singleMovie.map((item, index) => {
                     return (
-                        <Link href={item.link}>
+                        <Link href={item.link} key={index}>
                             <a className={item.className}>{item.name}</a>
                         </Link>
                     )

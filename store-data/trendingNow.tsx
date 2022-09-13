@@ -219,7 +219,7 @@ const trendingNow = [
             year: 2018,
             actor: ['Tom Hardy', 'Tom Holland', 'Woody Harrelson', 'Naomie Harris'],
             director: ['Yuzuru Tachikawa'],
-            category: ['Hình Sự', 'Phiêu Lưu', 'Tài Liệu', 'Bí ẩn'],
+            category: ['Hình Sự', 'Phiêu Lưu', 'Tài Liệu', 'Bí ẩn', 'Hoạt Hình'],
             country: [
                 {
                     name: 'Nhật Bản',
@@ -905,7 +905,7 @@ const trendingNow = [
                 'Ōtani Ikue',
             ],
             director: ['Kodama Kanetsugu'],
-            category: ['Hành Động', 'Kinh Dị', 'Bí ẩn'],
+            category: ['Hành Động', 'Kinh Dị', 'Bí ẩn', 'Hoạt Hình'],
             country: [
                 {
                     name: 'Nhật Bản',
@@ -968,7 +968,7 @@ const trendingNow = [
                 'Ōtani Ikue',
             ],
             director: ['Kodama Kanetsugu'],
-            category: ['Hành Động', 'Hình Sự', 'Kinh Dị', 'Bí ẩn'],
+            category: ['Hành Động', 'Hình Sự', 'Kinh Dị', 'Bí ẩn', 'Hoạt Hình'],
             country: [
                 {
                     name: 'Nhật Bản',

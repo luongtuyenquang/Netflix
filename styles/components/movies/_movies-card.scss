@@ -21,6 +21,10 @@
 
             &:hover {
                 transform: scale(1.07);
+
+                @include max-1023() {
+                    transform: unset;
+                }
             }
         }
     }

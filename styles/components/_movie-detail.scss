@@ -151,6 +151,10 @@
 
         &:hover {
             background-color: #0e544d;
+
+            @include max-1023() {
+                background-color: unset;
+            }
         }
 
         &:last-child {
@@ -168,6 +172,10 @@
 
             &:hover {
                 background-color: #262626;
+
+                @include max-1023() {
+                    background-color: #464646;
+                }
             }
         }
 

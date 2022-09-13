@@ -66,6 +66,10 @@
 
             &:hover {
                 color: $secondary-color;
+
+                @include max-1023() {
+                    color: unset;
+                }
             }
 
             & a {
@@ -89,6 +93,11 @@
             &:hover {
                 color: #ff2f76;
                 padding-left: 0.7rem;
+
+                @include max-1023() {
+                    color: $secondary-color;
+                    padding-left: 0.5rem;
+                }
             }
         }
 

@@ -16,7 +16,7 @@
     }
 
     &__message {
-        color: $main-color;
+        color: $secondary-color;
         font-size: 1.4rem;
         padding-left: 0.5rem;
     }
@@ -34,7 +34,7 @@
         position: absolute;
         top: 3px;
         right: 3px;
-        color: $main-color;
+        color: $secondary-color;
         transition: color 0.2s;
 
         &:hover {

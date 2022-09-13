@@ -1,6 +1,6 @@
 .movies-favourite {
     &__close {
-        @include flex(center, center);
+        display: none;
         position: absolute;
         top: 0;
         right: 0;
@@ -8,13 +8,16 @@
         font-size: 2.3rem;
         background-color: #16a194;
         width: 3.5rem;
-        height: 3.2rem;
-        border-bottom-left-radius: 7px;
-        display: none;
+        height: 3.5rem;
         animation: slideLeft linear 0.2s;
+        transition: 0.2s;
 
         @include max-1023() {
-            display: flex;
+            @include flex(center, center);
+        }
+
+        &:hover {
+            color: #bb0303;
         }
     }
 
@@ -32,7 +35,7 @@
 }
 
 .movie-card:hover .movies-favourite__close {
-    display: flex;
+    @include flex(center, center);
 }
 
 @keyframes slideLeft {

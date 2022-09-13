@@ -21,6 +21,10 @@
 
             &:hover {
                 transform: scale(1.07);
+
+                @include max-1023() {
+                    transform: unset;
+                }
             }
         }
     }
@@ -47,7 +51,7 @@
     }
 
     &__name-us {
-        color: $main-color;
+        color: $secondary-color;
         opacity: $opacity-70;
         font-size: 1.2rem;
 

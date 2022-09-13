@@ -1,9 +1,9 @@
 .search-movie {
     @include flex(center, unset);
-    color: $main-color;
+    color: $secondary-color;
     width: 30rem;
     border-radius: 30px;
-    box-shadow: 0px 0px 2.5px 0px $secondary-color;
+    box-shadow: 0px 0px 2.5px 0px $primary-color;
     height: $search-height;
     transition: 0.2s;
     position: absolute;
@@ -33,7 +33,7 @@
         border: none;
         background-color: transparent;
         flex: 1;
-        color: $main-color;
+        color: $secondary-color;
         padding-right: 1.2rem;
         height: $search-height;
 
@@ -55,7 +55,7 @@
         transition: 0.2s;
 
         &:hover {
-            color: $secondary-color;
+            color: $primary-color;
             background-color: #424040;
         }
 
@@ -65,7 +65,7 @@
     }
 
     &--focus {
-        box-shadow: 0px 0px 4px 0px $secondary-color;
+        box-shadow: 0px 0px 4px 0px $primary-color;
     }
 
     &--pt-4 {

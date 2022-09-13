@@ -1,8 +1,12 @@
 .footer {
     display: flex;
-    color: $main-color;
-    background-color: $main-bg;
+    color: $secondary-color;
+    background-color: $primary-background-color;
     padding: 4rem 0;
+
+    &__logo {
+        width: fit-content;
+    }
 
     &__container {
         display: flex;
@@ -47,7 +51,7 @@
             font-size: 1.5rem;
             text-transform: uppercase;
             padding-bottom: 1.7rem;
-            color: $secondary-color;
+            color: $primary-color;
 
             @include max-767() {
                 font-size: 1.6rem;
@@ -65,7 +69,7 @@
             }
 
             &:hover {
-                color: $secondary-color;
+                color: $primary-color;
 
                 @include max-1023() {
                     color: unset;
@@ -84,7 +88,7 @@
         }
 
         &--bold {
-            color: $secondary-color;
+            color: $primary-color;
         }
 
         &--fb {
@@ -95,7 +99,7 @@
                 padding-left: 0.7rem;
 
                 @include max-1023() {
-                    color: $secondary-color;
+                    color: $primary-color;
                     padding-left: 0.5rem;
                 }
             }

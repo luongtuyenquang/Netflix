@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <section className='footer__container'>
             <div className='footer__item'>
                 <Link href='/'>
-                    <a>
+                    <a className='footer__logo'>
                         <Image src={logo} width='90' height='30' />
                     </a>
                 </Link>

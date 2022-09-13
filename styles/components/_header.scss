@@ -44,7 +44,7 @@
     }
 
     &__right {
-        color: $main-color;
+        color: $secondary-color;
 
         & i {
             font-size: 1.8rem;
@@ -78,7 +78,7 @@
 
         &-link {
             font-size: 1.4rem;
-            color: $main-color;
+            color: $secondary-color;
             font-weight: 500;
             transition: color linear 0.15s;
 
@@ -88,7 +88,7 @@
             }
 
             &:hover {
-                color: $secondary-color;
+                color: $primary-color;
             }
 
             &--relative {
@@ -132,12 +132,12 @@
     }
 
     &--scroll {
-        background-color: $main-bg !important;
+        background-color: $primary-background-color !important;
         height: $header-height-scroll;
     }
 
     &--active {
-        color: $secondary-color;
+        color: $primary-color;
     }
 }
 

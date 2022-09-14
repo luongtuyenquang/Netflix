@@ -1,0 +1,186 @@
+.movie-detail {
+  margin-top: calc($header-height - 1rem);
+  color: $secondary-color;
+  padding-top: 4rem;
+
+  @include from-1024-1299() {
+    width: $width-container-tablet;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__group {
+    @include flex(flex-start, center);
+    background-color: #0000008c;
+    border-radius: 5px;
+    padding: 3rem 13rem 3rem 20rem;
+
+    @include from-1024-1299() {
+      padding: 3rem 7rem 3rem 20rem;
+    }
+
+    @include max-1023() {
+      flex-direction: column;
+      padding: 2rem 0 1rem;
+    }
+  }
+
+  &__image {
+    display: flex;
+
+    @include max-1023() {
+      width: 100%;
+    }
+
+    &-parent {
+      position: relative;
+      width: 30rem;
+      height: 40rem;
+      margin: 0 auto;
+    }
+
+    &-group {
+      @include flex(center, space-evenly);
+      position: absolute;
+      background-color: #079183;
+      left: 0;
+      right: 0;
+      bottom: 0px;
+      height: 4.5rem;
+    }
+  }
+  &__info {
+    margin-left: 2rem;
+
+    @include max-1023() {
+      width: 100%;
+      margin-left: unset;
+    }
+
+    &-group {
+      padding-bottom: 2rem;
+    }
+
+    &-name {
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: 500;
+      color: $primary-color;
+      padding-bottom: 0.4rem;
+
+      @include max-1023() {
+        text-align: center;
+        padding: 3rem 0 2rem;
+      }
+    }
+
+    &-origin-name {
+      font-size: 1.4rem;
+      opacity: $opacity-70;
+      font-weight: 300;
+
+      @include max-1023() {
+        text-align: center;
+        font-size: 1.5rem;
+      }
+    }
+
+    &-movie {
+      @include max-1023() {
+        padding-left: 2rem;
+        padding-right: 1rem;
+      }
+    }
+
+    &-general {
+      font-size: 1.3rem;
+      padding-bottom: 1rem;
+
+      & span {
+        color: $primary-color;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  &__description {
+    padding: 3rem 0;
+    &-title {
+      font-size: 1.7rem;
+      text-transform: uppercase;
+      color: $primary-color;
+      padding-bottom: 2rem;
+    }
+
+    &-name {
+      font-size: 1.6rem;
+      padding-bottom: 1rem;
+
+      @include max-1023() {
+        text-align: center;
+        padding-bottom: 2rem;
+      }
+
+      @include max-767() {
+        line-height: 1.4;
+      }
+    }
+
+    &-content {
+      font-size: 1.4rem;
+      font-weight: 300;
+      line-height: 1.4;
+      color: #ffffffd9;
+
+      @include max-1023() {
+        text-align: justify;
+      }
+    }
+  }
+
+  &__btn {
+    @include flex(center, center);
+    width: 50%;
+    border-right: 1px solid black;
+    height: 100%;
+    text-align: center;
+    background-image: unset;
+    cursor: pointer;
+    font-size: 1.4rem;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: #0e544d;
+
+      @include max-1023() {
+        background-color: unset;
+      }
+    }
+
+    &:last-child {
+      margin-right: unset;
+      border-right: unset;
+    }
+
+    & i {
+      padding-right: 0.5rem;
+    }
+
+    &--disable {
+      background-color: #464646;
+      color: #dddbdb;
+
+      &:hover {
+        background-color: #262626;
+
+        @include max-1023() {
+          background-color: #464646;
+        }
+      }
+    }
+
+    &--size {
+      font-size: 2.4rem;
+    }
+  }
+}

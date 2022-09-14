@@ -1,0 +1,158 @@
+.header {
+  width: 100%;
+  height: $header-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: height 0.2s linear;
+
+  &__container {
+    @include flex(center, space-between);
+    height: $header-height;
+    width: $width-container;
+    margin: 0 auto;
+
+    @include from-1024-1299() {
+      width: $width-container-tablet;
+    }
+
+    @include max-1023() {
+      width: $width-container-mobile;
+    }
+  }
+
+  &__left {
+    @include flex(center, unset);
+
+    &--mobile {
+      animation: slideOpenLeft 0.15s linear;
+
+      @include max-1023() {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        align-items: flex-start;
+        flex-direction: column;
+        background-color: black;
+        padding-top: 16px;
+        padding-left: 13.125px;
+      }
+    }
+  }
+
+  &__right {
+    color: $secondary-color;
+
+    & i {
+      font-size: 1.8rem;
+      margin-left: 2rem;
+      cursor: pointer;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    margin-left: 3rem;
+
+    @include max-1023() {
+      display: none;
+      flex-direction: column;
+      margin-left: unset;
+      margin-top: 2rem;
+    }
+
+    &--mobile {
+      display: flex;
+    }
+
+    &-list {
+      margin-right: 2rem;
+
+      @include max-1023() {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &-link {
+      font-size: 1.4rem;
+      color: $secondary-color;
+      font-weight: 500;
+      transition: color linear 0.15s;
+
+      @include max-1023() {
+        font-size: 1.7rem;
+        transition: unset;
+      }
+
+      &:hover {
+        color: $primary-color;
+      }
+
+      &--relative {
+        position: relative;
+
+        & span {
+          @include flex(center, center);
+          position: absolute;
+          top: -10px;
+          background-color: #d53737;
+          border-radius: 50%;
+          z-index: 111111111111;
+          color: white;
+          right: -26px;
+          filter: drop-shadow(2px 3px 6px black);
+          width: 23px;
+          height: 23px;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+
+  &__open,
+  &__close {
+    display: none;
+    position: absolute;
+    color: white;
+    top: 3rem;
+    transform: translateY(-50%);
+    right: -0.2rem;
+    font-size: 3rem;
+    padding: 1rem;
+    cursor: pointer;
+  }
+
+  &__open {
+    @include max-1023() {
+      display: block;
+    }
+  }
+
+  &--scroll {
+    background-color: $primary-background-color !important;
+    height: $header-height-scroll;
+  }
+
+  &--active {
+    color: $primary-color;
+  }
+}
+
+.header.playing .header__open {
+  display: none;
+}
+.header.playing .header__close {
+  display: block;
+}
+
+@keyframes slideOpenLeft {
+  from {
+    right: 35%;
+  }
+  to {
+    right: 0;
+  }
+}

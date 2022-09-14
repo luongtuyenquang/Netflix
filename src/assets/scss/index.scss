@@ -1,0 +1,20 @@
+// common
+@import './common/variables';
+@import './common/mixin';
+@import './common/base';
+@import './common/button';
+@import './common/movie/index';
+
+// components
+@import './components/header';
+@import './components/banner';
+@import './components/search-movie';
+@import './components/footer';
+@import './components/toastify';
+
+// pages
+@import './pages/movie-detail';
+@import './pages/movie-all';
+@import './pages/movie-series';
+@import './pages/movie-favourite';
+@import './pages/not-found';

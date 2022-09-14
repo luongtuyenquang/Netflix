@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: $width-container;
+  margin: 0 auto;
+
+  @include max-1023() {
+    width: $width-container-mobile;
+  }
+
+  &-fluid {
+    width: 100%;
+    background-color: #000000f5;
+
+    @include max-767() {
+      background-color: #1e1e1e;
+    }
+  }
+}
+
+.main {
+  margin-top: 100vh;
+  padding-bottom: 2rem;
+
+  @include max-1299() {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include from-1024-1299() {
+    width: $width-container-tablet;
+  }
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background-color: $primary-color;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  display: none;
+
+  @include max-1023() {
+    display: block;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+input {
+  outline: none;
+}

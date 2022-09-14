@@ -1,0 +1,53 @@
+.toastify {
+  display: none;
+  background-color: #3c3c3c;
+  position: fixed;
+  top: $header-height;
+  right: 1rem;
+  width: 28rem;
+  height: 6rem;
+  padding-left: 1rem;
+  z-index: 1;
+  animation: showMessage 0.2s;
+  cursor: pointer;
+
+  &.toastify--show {
+    @include flex(center, unset);
+  }
+
+  &__message {
+    color: $secondary-color;
+    font-size: 1.4rem;
+    padding-left: 0.5rem;
+  }
+
+  &__icon-success,
+  &__icon-close {
+    font-size: 2.5rem;
+  }
+
+  &__icon-success {
+    color: #08c908;
+  }
+
+  &__icon-close {
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    color: $secondary-color;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #e52828;
+    }
+  }
+}
+
+@keyframes showMessage {
+  from {
+    right: -28rem;
+  }
+  to {
+    right: 1rem;
+  }
+}

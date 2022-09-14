@@ -1,0 +1,11 @@
+.all-movies {
+  margin-top: calc($header-height - 1rem);
+  padding: 2rem 0 3rem;
+  position: relative;
+
+  @include from-1024-1299() {
+    width: $width-container-tablet;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}

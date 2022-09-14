@@ -36,6 +36,7 @@ const SearchMovie: React.FC<{ setSortAllMovies: Dispatch<SetStateAction<MovieTS[
                     )
                 })
                 setSortAllMovies(resultSearch)
+                window.scrollTo(0, 0)
             }
             if (valueInput === '') {
                 setSortAllMovies(allMovies)

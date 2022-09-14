@@ -67,7 +67,7 @@ const Header: React.FC = () => {
             iconOpen?.removeEventListener('click', openHeader)
             iconClose?.removeEventListener('click', closeHeader)
         }
-    }, [])
+    }, [router])
 
     return (
         <header className='header__container'>

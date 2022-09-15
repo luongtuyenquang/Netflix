@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import Image from 'next/image'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { ButtonLink, ButtonNoLink } from '../../common/Button'
 import { addMovieFavourite } from '../../redux/moviesSlice'
@@ -14,6 +14,7 @@ import Toastify from '../../components/Toastify'
 
 const MovieSlug: React.FC = () => {
   const router = useRouter()
+  const [isFavourite, setIsFavourite] = useState<boolean>(false)
   const movieSlug = router.query.movieSlug
   const dispatch = useDispatch()
   const movies = useSelector<RootState, MovieCardTS[]>((state) => state.movies)
@@ -28,6 +29,11 @@ const MovieSlug: React.FC = () => {
     slug,
   }: MovieFavouriteTS) => {
     dispatch(addMovieFavourite({ _id, thumb_url, name, origin_name, slug }))
+    if (indexMovieFavourite) {
+      setIsFavourite(false)
+    } else {
+      setIsFavourite(true)
+    }
   }
 
   useEffect(() => {
@@ -43,7 +49,7 @@ const MovieSlug: React.FC = () => {
 
   return (
     <>
-      {indexMovieFavourite ? (
+      {isFavourite && indexMovieFavourite ? (
         <Toastify
           isIndex={indexMovieFavourite}
           icon={'bx bx-check'}

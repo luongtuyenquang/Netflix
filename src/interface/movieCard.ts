@@ -1,8 +1,8 @@
 interface MovieCardTS {
-  id?: string
-  image: string
+  _id?: string
+  thumb_url: string
   name: string
-  originName: string
+  origin_name: string
   slug: string
 }
 

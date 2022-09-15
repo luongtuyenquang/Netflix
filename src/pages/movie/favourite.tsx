@@ -5,11 +5,11 @@ import { useSelector } from 'react-redux'
 import headerScroll from '../../common/HeaderScroll'
 import MovieCard from '../../common/MovieCard'
 import { RootState } from '../../redux/store'
-import MovieFavouriteTS from '../../interface/movieFavourite'
+import MovieCardTS from '../../interface/movieCard'
 
 const MoviesFavourite: React.FC = () => {
   const router = useRouter()
-  const movies = useSelector<RootState, MovieFavouriteTS[]>((state) => state.movies)
+  const movies = useSelector<RootState, MovieCardTS[]>((state) => state.movies)
 
   useEffect(() => {
     const header = document.querySelector('.header') as HTMLElement
@@ -37,10 +37,10 @@ const MoviesFavourite: React.FC = () => {
             movies.map((movie) => {
               return (
                 <MovieCard
-                  id={movie._id}
-                  image={movie.thumb_url}
+                  _id={movie._id}
+                  thumb_url={movie.thumb_url}
                   name={movie.name}
-                  originName={movie.origin_name}
+                  origin_name={movie.origin_name}
                   slug={movie.slug}
                   key={movie._id}
                 />

@@ -8,6 +8,7 @@ import headerScroll from '../../common/HeaderScroll'
 import allMovies from '../../store-data/allMovies'
 import movieSeries from '../../store-data/movieSeries'
 import MovieFavouriteTS from '../../interface/movieFavourite'
+import MovieCardTS from '../../interface/movieCard'
 import { RootState } from '../../redux/store'
 import Toastify from '../../components/Toastify'
 
@@ -15,7 +16,7 @@ const MovieSlug: React.FC = () => {
   const router = useRouter()
   const movieSlug = router.query.movieSlug
   const dispatch = useDispatch()
-  const movies = useSelector<RootState, MovieFavouriteTS[]>((state) => state.movies)
+  const movies = useSelector<RootState, MovieCardTS[]>((state) => state.movies)
   const indexMovieFavourite = movies.some((movie) => movie.slug === movieSlug)
   const isMovieSeries = movieSeries.some((item) => item.movie.slug === movieSlug)
 

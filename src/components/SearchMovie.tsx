@@ -22,13 +22,16 @@ const SearchMovie: React.FC<{ setSortAllMovies: Dispatch<SetStateAction<MovieTS[
       if (e.which === 13) {
         const resultSearch = allMovies.filter((item) => {
           return (
-            item.movie.name.toLowerCase().includes(valueInput.toLowerCase()) ||
-            item.movie.category.join(', ').toLowerCase().includes(valueInput.toLowerCase()) ||
+            item.movie.name.toLowerCase().includes(valueInput.trim().toLowerCase()) ||
+            item.movie.category
+              .join(', ')
+              .toLowerCase()
+              .includes(valueInput.trim().toLowerCase()) ||
             removeVietNameseTones(item.movie.name.toLowerCase()).includes(
-              valueInput.toLowerCase()
+              valueInput.trim().toLowerCase()
             ) ||
             removeVietNameseTones(item.movie.category.join(', ').toLowerCase()).includes(
-              valueInput.toLowerCase()
+              valueInput.trim().toLowerCase()
             )
           )
         })

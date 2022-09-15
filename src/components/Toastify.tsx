@@ -20,7 +20,7 @@ const Toastify: React.FC<MessageProp> = ({ isIndex, icon, message }) => {
     if (isIndex) {
       setTimeout(() => {
         hiddenMessage()
-      }, 3000)
+      }, 2500)
     }
 
     toastify.addEventListener('click', hiddenMessage)

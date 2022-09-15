@@ -5,13 +5,12 @@ import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import logo from '../assets/images/logo-netflix.svg'
 import headerScroll from '../common/HeaderScroll'
-import MovieFavouriteTS from '../interface/movieFavourite'
 import { RootState } from '../redux/store'
+import MovieCardTS from '../interface/movieCard'
 
 const Header: React.FC = () => {
   const router = useRouter()
-  const movies = useSelector<RootState, MovieFavouriteTS[]>((state) => state.movies)
-
+  const movies = useSelector<RootState, MovieCardTS[]>((state) => state.movies)
   const activeLink = (url: string, pathName: string) => (url === pathName ? 'header--active' : '')
 
   useEffect(() => {
@@ -111,9 +110,9 @@ const Header: React.FC = () => {
         </ul>
       </div>
       {/* <div className='header__right'>
-                <i className='bx bx-search'></i>
-                <i className='bx bxs-bell'></i>
-            </div> */}
+          <i className='bx bx-search'></i>
+          <i className='bx bxs-bell'></i>
+      </div> */}
       <i className='bx bx-x header__close'></i>
       <i className='bx bx-menu-alt-right header__open'></i>
     </header>

@@ -44,9 +44,9 @@ const TypeMovie: React.FC = () => {
             if (item.movie.category.join(', ').includes(typeMovie)) {
               return (
                 <MovieCard
-                  image={item.movie.thumb_url}
+                  thumb_url={item.movie.thumb_url}
                   name={item.movie.name}
-                  originName={item.movie.origin_name}
+                  origin_name={item.movie.origin_name}
                   slug={item.movie.slug}
                   key={item.movie._id}
                 />

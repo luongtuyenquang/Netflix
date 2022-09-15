@@ -1,10 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit'
+import MovieCardTS from '../interface/movieCard'
 
 let index = -1
 
+const initialState: MovieCardTS[] = []
+
 const movieSlice = createSlice({
   name: 'movies',
-  initialState: [],
+  initialState,
   reducers: {
     addMovieFavourite: (state, action) => {
       index = state.findIndex((item) => item._id === action.payload._id)

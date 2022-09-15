@@ -834,6 +834,135 @@ const topRated = [
       },
     ],
   },
+  {
+    status: true,
+    msg: '',
+    movie: {
+      modified: {
+        time: '2022-02-17T14:40:21.133Z',
+      },
+      _id: '620e5e1900af13e4cb51ae8a',
+      name: 'Chuyến Tàu Sinh Tử',
+      origin_name: 'Train To Busan (Busanhaeng)',
+      content:
+        'Phim Train To Busan - Chuyến Tàu Sinh Tử lấy bối cảnh đất nước Hàn bị tấn công bởi một loại virus bí ẩn, biến con người thành những xác sống hung hăng, khát máu. Có mặt trên chuyến tàu từ Seoul tới Busan là một người cha cùng con gái, hai vợ chồng chuẩn bị đón đứa con đầu lòng và một số cô cậu học sinh cấp 3. Khi đại dịch xác sống bất ngờ bùng phát, họ không còn cách nào khác ngoài đương đầu với nó để bảo vệ những người thân yêu của mình. Hành trình 453km từ Seoul tới vùng an toàn Busan bỗng trở thành cuộc chiến khốc liệt để sinh tồn.',
+      type: 'single',
+      status: 'completed',
+      thumb_url: 'https://img.ophim.cc/uploads/movies/chuyen-tau-sinh-tu-thumb.jpg',
+      is_copyright: 'off',
+      trailer_url: 'https://www.youtube.com/watch?v=09sMnP1tTdQ',
+      time: '118 phút',
+      episode_current: 'Full',
+      episode_total: '1',
+      quality: 'HD',
+      lang: 'Vietsub',
+      notify: '',
+      showtimes: '',
+      slug: 'chuyen-tau-sinh-tu',
+      year: 2016,
+      actor: [
+        'Gong Yoo',
+        '  Jung Yu-Mi',
+        '  Ma Dong-Seok',
+        '  Kim Soo-Ahn',
+        '  Kim Eui-Sung',
+        '  Choi Woo-Sik',
+        '  Ahn So-Hee',
+        '  Jang Hyuk-Jin',
+        '  Shim Eun-Kyung',
+        '  Jung Suk-Yong',
+        '  Ye Soo-Jung',
+        '  Park Myung-Shin',
+        '  Woo Do-Im',
+      ],
+      director: ['Yeon Sang-Ho'],
+      category: ['Hành Động', 'Kinh Dị', 'Gia Đình'],
+      country: [
+        {
+          name: 'Hàn Quốc',
+        },
+      ],
+      chieurap: false,
+      poster_url: '',
+    },
+    episodes: [
+      {
+        server_name: 'Vietsub #1',
+        server_data: [
+          {
+            name: 'Full',
+            slug: 'full',
+            filename: 'Chuyến tàu sinh tử',
+            link_embed: 'http://aa.nguonphimmoi.com/share/84d9ee44e457ddef7f2c4f25dc8fa865',
+            link_m3u8: 'http://aa.nguonphimmoi.com/20220217/199_8fd54d42/index.m3u8',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    status: true,
+    msg: '',
+    movie: {
+      modified: {
+        time: '2022-07-23T05:41:44.000Z',
+      },
+      _id: '6231d0783c735a9a446dda37',
+      name: 'Titanic',
+      origin_name: 'Titanic',
+      content:
+        'Một quý tộc mười bảy tuổi rơi vào tình yêu với một nghệ sĩ tốt bụng nhưng nghèo trên tàu sang trọng, xấu xa r.M.S. Titanic.',
+      type: 'single',
+      status: 'completed',
+      thumb_url: 'https://img.ophim.cc/uploads/movies/titanic-thumb.jpg',
+      is_copyright: 'off',
+      trailer_url: '',
+      time: '194 phút',
+      episode_current: 'Full',
+      episode_total: '1',
+      quality: 'HD',
+      lang: 'Vietsub',
+      notify: '',
+      showtimes: '',
+      slug: 'titanic',
+      year: 1997,
+      actor: [
+        'Kate Winslet',
+        'Leonardo DiCaprio',
+        'Billy Zane',
+        'Kathy Bates',
+        'Bill Paxton',
+        'Gloria Stuart',
+      ],
+      director: ['James Cameron'],
+      category: ['Tình Cảm', 'Phiêu Lưu'],
+      country: [
+        {
+          name: 'Âu Mỹ',
+        },
+        {
+          name: 'Mexico',
+        },
+      ],
+      chieurap: false,
+      poster_url: '',
+      sub_docquyen: 'off',
+    },
+    episodes: [
+      {
+        server_name: 'Vietsub #1',
+        server_data: [
+          {
+            name: 'Full',
+            slug: 'full',
+            filename: 'titanic-the-ship-of-dreams-tap-0',
+            link_embed: 'https://kd.hd-bophim.com/share/6f0cdeedf664c24860cba8842e94b300',
+            link_m3u8: 'https://kd.hd-bophim.com/20220723/18776_9adcca47/index.m3u8',
+          },
+        ],
+      },
+    ],
+  },
 ]
 
 export default topRated

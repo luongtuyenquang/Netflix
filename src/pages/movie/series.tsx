@@ -7,6 +7,7 @@ import movieSeries from '../../store-data/movieSeries'
 
 const MovieSeries: React.FC = () => {
   const router = useRouter()
+  const sortMovieSeries = movieSeries.sort((a, b) => b.movie.year - a.movie.year)
 
   useEffect(() => {
     const header = document.querySelector('.header') as HTMLElement
@@ -27,7 +28,7 @@ const MovieSeries: React.FC = () => {
       <section className='all-movies'>
         <p className='movies__title'>Danh sách phim bộ hiện có</p>
         <div className='movies-list'>
-          {movieSeries.map((item) => {
+          {sortMovieSeries.map((item) => {
             return (
               <MovieCard
                 thumb_url={item.movie.thumb_url}

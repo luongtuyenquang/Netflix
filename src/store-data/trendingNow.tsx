@@ -964,6 +964,65 @@ const trendingNow = [
       },
     ],
   },
+  {
+    status: true,
+    msg: '',
+    movie: {
+      modified: {
+        time: '2022-03-20T11:42:53.484Z',
+      },
+      _id: '6237133d3d016a3b6717edf7',
+      name: 'Trùm, Cớm và Ác Quỷ',
+      origin_name: 'The Gangster, the Cop, the Devil',
+      content:
+        'Sau đó hầu như không còn sống sót một cuộc tấn công bạo lực của một kẻ giết người nối tiếp khó nắm bắt, ông chủ tội phạm Jang Dong-su (Don Lee) thấy mình hình thành một sự hợp tác không thể xảy ra với thám tử địa phương Jung Tae-Seok (Kim Moo Yul) để bắt kẻ giết người tàn bạo chỉ đơn giản là "K ".',
+      type: 'single',
+      status: 'completed',
+      thumb_url: 'https://img.ophim.cc/uploads/movies/trum-com-va-ac-quy-thumb.jpg',
+      is_copyright: 'off',
+      trailer_url: '',
+      time: '',
+      episode_current: 'Full',
+      episode_total: '1',
+      quality: 'HD',
+      lang: 'Vietsub',
+      notify: '',
+      showtimes: '',
+      slug: 'trum-com-va-ac-quy',
+      year: 2019,
+      actor: [
+        'Ma Dong-seok',
+        'Kim Sung-kyu',
+        'Kim Moo Yul',
+        'Lee Eun-saem',
+        'Kim Gyu-ri',
+        'Choi Min-chul',
+      ],
+      director: ['Lee Won-tae'],
+      category: ['Hành Động', 'Kịch Tính'],
+      country: [
+        {
+          name: 'Hàn Quốc',
+        },
+      ],
+      chieurap: false,
+      poster_url: '',
+    },
+    episodes: [
+      {
+        server_name: 'Vietsub #1',
+        server_data: [
+          {
+            name: 'Full',
+            slug: 'full',
+            filename: 'Trùm, Cớm và Ác Quỷ',
+            link_embed: 'https://aa.nguonphimmoi.com/share/1e51e0f3b6b60070219ccb91bb619a6b',
+            link_m3u8: 'https://aa.nguonphimmoi.com/20220319/4372_eb945297/index.m3u8',
+          },
+        ],
+      },
+    ],
+  },
 ]
 
 export default trendingNow

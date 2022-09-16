@@ -1,6 +1,6 @@
-Welcome to Netflix - version 2
+Welcome to Netflix - personal
 
-Link website: [Netflix](https://www.facebook.com/fb.luongtuyenquang/)
+Link website: [Netflix-personal](https://netflix-personal.vercel.app/)
 
 Designer: [Lương Tuyên Quang](https://www.facebook.com/fb.luongtuyenquang/)
 

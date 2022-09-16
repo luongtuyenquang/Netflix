@@ -2,7 +2,7 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import allMovies from '../../store-data/allMovies'
 import MovieCard from '../../common/MovieCard'
-import headerScroll from '../../common/HeaderScroll'
+import headerScroll from '../../common/headerScroll'
 import footerTypesMovie from '../../store-data/footer/footerTypesMovie'
 
 const TypeMovie: React.FC = () => {

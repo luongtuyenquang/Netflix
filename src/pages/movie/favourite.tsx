@@ -2,7 +2,7 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import headerScroll from '../../common/HeaderScroll'
+import headerScroll from '../../common/headerScroll'
 import MovieCard from '../../common/MovieCard'
 import { RootState } from '../../redux/store'
 import MovieCardTS from '../../interface/movieCard'
@@ -20,6 +20,7 @@ const MoviesFavourite: React.FC = () => {
       pathNameUrl: '/movie/favourite',
       color: 'black',
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

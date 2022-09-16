@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { ButtonLink, ButtonNoLink } from '../../common/Button'
 import { addMovieFavourite } from '../../redux/moviesSlice'
-import headerScroll from '../../common/HeaderScroll'
+import headerScroll from '../../common/headerScroll'
 import allMovies from '../../store-data/allMovies'
 import movieSeries from '../../store-data/movieSeries'
 import MovieFavouriteTS from '../../interface/movieFavourite'
@@ -45,6 +45,7 @@ const MovieSlug: React.FC = () => {
       pathNameUrl: router.pathname,
       color: 'black',
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
@@ -63,7 +64,7 @@ const MovieSlug: React.FC = () => {
               <div className='movie-detail__group'>
                 <div className='movie-detail__image'>
                   <div className='movie-detail__image-parent'>
-                    <Image src={item.movie.thumb_url} layout='fill' priority />
+                    <Image src={item.movie.thumb_url} layout='fill' priority alt='Hinh anh' />
                     <div className='movie-detail__image-group'>
                       <ButtonNoLink
                         className={`movie-detail__btn ${

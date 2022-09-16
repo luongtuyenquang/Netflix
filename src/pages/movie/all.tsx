@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import headerScroll from '../../common/HeaderScroll'
+import headerScroll from '../../common/headerScroll'
 import MovieCard from '../../common/MovieCard'
 import allMovies from '../../store-data/allMovies'
 import SearchMovie from '../../components/SearchMovie'
@@ -21,6 +21,7 @@ const AllMovies: React.FC = () => {
       pathNameUrl: '/movie/all',
       color: 'black',
     })
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (

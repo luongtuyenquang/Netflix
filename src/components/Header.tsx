@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
 import logo from '../assets/images/logo-netflix.svg'
-import headerScroll from '../common/HeaderScroll'
+import headerScroll from '../common/headerScroll'
 import { RootState } from '../redux/store'
 import MovieCardTS from '../interface/movieCard'
 

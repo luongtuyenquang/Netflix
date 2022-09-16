@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
       <div className='footer__item'>
         <Link href='/'>
           <a className='footer__logo'>
-            <Image src={logo} width='90' height='30' />
+            <Image src={logo} width='90' height='30' alt='Logo' />
           </a>
         </Link>
         <p className='footer__item-text footer__item--pr-7 footer__item-text--unhover'>

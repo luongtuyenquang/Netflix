@@ -42,6 +42,7 @@ const SearchMovie: React.FC<{ setSortAllMovies: Dispatch<SetStateAction<MovieTS[
         setSortAllMovies(allMovies)
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [valueInput])
 
   useEffect(() => {

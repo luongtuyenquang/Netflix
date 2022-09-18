@@ -5,6 +5,7 @@ import headerScroll from '../../common/headerScroll'
 import MovieCard from '../../common/MovieCard'
 import allMovies from '../../store-data/allMovies'
 import SearchMovie from '../../components/SearchMovie'
+import BackToTop from '../../components/BackToTop'
 
 const AllMovies: React.FC = () => {
   const router = useRouter()
@@ -52,6 +53,7 @@ const AllMovies: React.FC = () => {
             })
           )}
         </div>
+        <BackToTop />
       </section>
     </>
   )

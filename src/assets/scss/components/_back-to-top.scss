@@ -1,0 +1,31 @@
+.back-top {
+  position: fixed;
+  top: 82%;
+  right: 1%;
+  font-size: 3rem;
+  color: white;
+  display: none;
+  width: 4rem;
+  height: 4rem;
+  background-color: #008b7d;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  @include max-1023() {
+    right: 2%;
+  }
+
+  &:hover {
+    background-color: #01ab9b;
+
+    @include max-1023() {
+      background-color: #008b7d;
+    }
+  }
+
+  &-icon {
+    @include flex(unset, center);
+    line-height: 4rem;
+  }
+}

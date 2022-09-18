@@ -188,7 +188,7 @@ const trendingNow = [
         time: '2022-03-18T11:53:16.749Z',
       },
       _id: '623472ac3c735a9a446e2817',
-      name: 'Thám Tử Lừng Danh Conan: Kẻ Hành Pháp Zero',
+      name: 'Kẻ Hành Pháp Zero - Thám Tử Lừng Danh Conan',
       origin_name: 'Detective Conan: Zero the Enforcer',
       content:
         'Thám tử Conan điều tra một vụ nổ xảy ra vào ngày khai mạc của một trung tâm hội nghị và khu nghỉ dưỡng Tokyo lớn.',
@@ -848,7 +848,7 @@ const trendingNow = [
         time: '2022-03-18T11:55:05.536Z',
       },
       _id: '623473193c735a9a446e2876',
-      name: 'Thám Tử Lừng Danh Conan: Cú Đấm Sapphire Xanh',
+      name: 'Cú Đấm Sapphire Xanh - Thám Tử Lừng Danh Conan',
       origin_name: 'Detective Conan: The Fist of Blue Sapphire',
       content:
         'Sapphire xanh lớn nhất thế giới, "nắm tay Lapis Blue", được cho là đã chìm đắm trong một con tàu cướp biển vào cuối thế kỷ 19, trên bờ biển Singapore. Một lô triệu phú địa phương để lấy nó, và khi nó được trưng bày trong một triển lãm tại khách sạn Singapore Marina Sands, một vụ giết người diễn ra.',
@@ -910,7 +910,7 @@ const trendingNow = [
         time: '2022-03-18T11:56:34.317Z',
       },
       _id: '623473723c735a9a446e28c9',
-      name: 'Thám Tử Lừng Danh Conan: Bóng Ma Đường Baker',
+      name: 'Bóng Ma Đường Baker - Thám Tử Lừng Danh Conan',
       origin_name: 'Detective Conan: The Phantom of Baker Street',
       content:
         'Hiroki Sawada là một đứa trẻ 10 tuổi đã vào một trường đại học Hoa Kỳ và thậm chí tốt nghiệp. Một ngày nọ, Hiroki đã hoàn thành a.i. Nô-ê-Sue-Ark và tự sát để kết thúc cuộc đời mình. 2 năm sau. Conan và Rachel và Genta, Ayumi, Mitsuhiko, Haibara cuối cùng cũng có thể chơi Cocoon nhưng Noah-Sue-Ark đã sửa đổi chương trình và làm cho Cocoon nhiều hơn và khó khăn hơn và khó khăn với 5 cảnh này: Viking. Cuộc đua Paris Dakari. Colosseum. Kho báu của Solomen. 1888 London. Điều kiện mà Noah Ark đã thay đổi là 50 đứa trẻ phải có khả năng sống sót nếu không thì không ai trong số họ có thể tồn tại trong thế giới thực nếu tất cả đã bị giết. Kịch bản nào Conan sẽ chọn, và điều gì sẽ xảy ra?',

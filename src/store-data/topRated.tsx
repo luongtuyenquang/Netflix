@@ -600,7 +600,7 @@ const topRated = [
         time: '2022-05-23T06:06:56.000Z',
       },
       _id: '6252e0dcb89e109508082260',
-      name: 'Thám Tử Lừng Danh Conan: Viên Đạn Đỏ',
+      name: 'Viên Đạn Đỏ - Thám Tử Lừng Danh Conan',
       origin_name: 'Detective Conan: The Scarlet Bullet',
       content:
         'Bộ phim lấy bối cảnh vào thời điểm Nhật Bản đang chuẩn bị cho sự kiện thế vận hội thể thao thế giới ở Tokyo, lúc này diễn ra hàng loạt vụ bắt cóc bí ẩn, đoàn tàu tuyến tính siêu ống chân không với tốc độ 1000km/h mới ra mắt trở thành hiện trường hoàn hảo để kẻ gian thực hiện vụ án, khiến cả FBI và gia đình Akai phải vào cuộc điều tra. Bộ phim sẽ xoay quanh gia đình Akai, đây là một gia đình vô cùng đặc biệt, gia đình này có một liên hệ mật thiết với tổ chức áo đen, nhóm người bí ẩn được điều hành bởi ông chủ giấu mặt, khi người mẹ bí ẩn Mary bị teo nhỏ giống như Conan và Haibara. Người con cả là Akai Shuichi được ví là Viên đạn bạc của tổ chức áo đen, nhưng trên thực tế anh là một đặc viên FBI nguỵ danh để trà trộn vào tổ chức áo đen. Người anh thứ hai là quán vương Haneda Shukichi, được gia đình giàu có là Haneda nhận nuôi. Và người em út là nữ thám tử trung học Sera Masumi. Cô bắt đầu điều tra các thông tin có liên quan tới việc mẹ mình bị teo nhỏ đã chuyển tới ngôi trường mà Ran đang theo học, để giải đáp những thắc mắc của cô về Shinichi.',
@@ -656,7 +656,7 @@ const topRated = [
         time: '2022-03-17T14:16:48.254Z',
       },
       _id: '623342d03c735a9a446e02f7',
-      name: 'Thám Tử Lừng Danh Conan: Âm Mưu Trên Biển',
+      name: 'Âm Mưu Trên Biển - Thám Tử Lừng Danh Conan',
       origin_name: 'Detective Conan: Strategy Above the Depths',
       content:
         'Một con tàu thuộc sở hữu của Tập đoàn Yatsushiro đánh một tảng băng trôi và chìm xuống. Mười lăm năm sau, nhóm Yatsushiro mời Thám tử Kogoro và bạn bè của mình trên một hành trình nơi một vụ giết người sau đó diễn ra. Bây giờ Conan và cảnh sát cố gắng xác định kẻ giết người.',
@@ -718,7 +718,7 @@ const topRated = [
         time: '2022-03-18T11:54:24.146Z',
       },
       _id: '623472f03c735a9a446e2853',
-      name: 'Thám Tử Lừng Danh Conan: Cơn Ác Mộng Đen Tối',
+      name: 'Cơn Ác Mộng Đen Tối - Thám Tử Lừng Danh Conan',
       origin_name: 'Detective Conan: The Darkest Nightmare',
       content:
         'Một điệp viên xâm nhập vào cơ quan cảnh sát quốc gia Nhật Bản, lấy lại các tập tin bí mật của Mi6 của Anh, CIA và FBI của Đức và Mỹ. Rei Furuya và một nhóm PSB của cảnh sát Tokyo đã chặn Spy trong nơi nghỉ ngơi, và ngay trước tai nạn xe hơi lớn, đặc vụ FBI Shuichi Akai đã bắn tỉa và đâm vào phương tiện của Spy. Ngày hôm sau, tại Thủy cung ở Tokyo với bánh xe Ferris, Conan và các chàng trai thám tử tìm thấy một người phụ nữ có heterochromia Iris bị mất trí nhớ và có một chiếc điện thoại di động bị hỏng. Quyết định ở lại và giúp người phụ nữ lấy lại ký ức, Conan và các chàng trai thám tử nằm dưới con mắt cảnh giác của Vermouth.',
@@ -780,7 +780,7 @@ const topRated = [
         time: '2022-03-18T11:52:03.500Z',
       },
       _id: '623472633c735a9a446e27fe',
-      name: 'Thám Tử Lừng Danh Conan: Mê Cung Trong Thành Phố Cổ',
+      name: 'Mê Cung Trong Thành Phố Cổ - Thám Tử Lừng Danh Conan',
       origin_name: 'Detective Conan: Crossroad in the Ancient Capital',
       content:
         'Thành viên Gang Genjibotaru Thief tiếp tục bị giết gần đây. Mỗi thành viên giữ một câu chuyện của Yoshitsune. Đền Sannoh có bức tượng Phật quan trọng Yakushi bị đánh cắp trong 8 năm. Nó đang được mở rộng 3 ngày sau đó. Họ có thể tìm thấy yakushi trong vòng 3 ngày?',

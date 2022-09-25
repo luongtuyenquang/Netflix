@@ -1,8 +1,8 @@
-import trendingNow from '../store-data/trendingNow'
 import { ButtonLink } from '../common/Button'
+import { TrendingNowProps } from '../interface/allTypesMovie'
 
-const Banner: React.FC = () => {
-  const venomMovie = trendingNow[1]
+const Banner: React.FC<TrendingNowProps> = ({ trendingNowMovies }) => {
+  const venomMovie = trendingNowMovies[1]
 
   return (
     <section className='banner'>

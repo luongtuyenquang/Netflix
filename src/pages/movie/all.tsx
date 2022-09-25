@@ -3,15 +3,16 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 import headerScroll from '../../common/headerScroll'
 import MovieCard from '../../common/MovieCard'
-import allMovies from '../../store-data/allMovies'
 import SearchMovie from '../../components/SearchMovie'
 import BackToTop from '../../components/BackToTop'
+import sortMoviesByYear from '../../common/sortMoviesByYear'
+import { AllMoviesProps } from '../../interface/allTypesMovie'
 
-const AllMovies: React.FC = () => {
+const AllMovies: React.FC<AllMoviesProps> = ({ moviesData, movieSeriesData }) => {
   const router = useRouter()
-  const [sortAllMovies, setSortAllMovies] = useState(
-    allMovies.sort((a, b) => b.movie.year - a.movie.year)
-  )
+  const allMoviesData = [...moviesData, ...movieSeriesData]
+
+  const [sortAllMovies, setSortAllMovies] = useState(sortMoviesByYear(allMoviesData, 'descrease'))
 
   useEffect(() => {
     const header = document.querySelector('.header') as HTMLElement
@@ -32,7 +33,7 @@ const AllMovies: React.FC = () => {
       </Head>
 
       <section className='all-movies'>
-        <SearchMovie setSortAllMovies={setSortAllMovies} />
+        <SearchMovie setSortAllMovies={setSortAllMovies} allMoviesData={allMoviesData} />
         <p className='movies__title search-movie--pt-4'>
           Hiện đang có tất cả <span>{sortAllMovies.length}</span> bộ phim
         </p>
@@ -57,6 +58,16 @@ const AllMovies: React.FC = () => {
       </section>
     </>
   )
+}
+
+export async function getServerSideProps() {
+  const resMovies = await fetch('https://632d70830d7928c7d24b1319.mockapi.io/api/movies')
+  const resMovieSeries = await fetch('https://632d70830d7928c7d24b1319.mockapi.io/api/movie-series')
+
+  const dataMovies = await resMovies.json()
+  const dataMovieSeries = await resMovieSeries.json()
+
+  return { props: { moviesData: dataMovies, movieSeriesData: dataMovieSeries } }
 }
 
 export default AllMovies

@@ -2,7 +2,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import logo from '../assets/images/logo-netflix.svg'
 import { ButtonLink } from '../common/Button'
-import footerLink from '../store-data/footer/footerLink'
+import footerLink from '../mock-data/footerLink'
 
 const Footer: React.FC = () => {
   return (

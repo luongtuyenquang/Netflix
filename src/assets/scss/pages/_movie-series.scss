@@ -1,7 +1,7 @@
 .movie-series {
   &__group {
     @include flex(center, center);
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1rem;
     background-color: #282828;
   }
 
@@ -20,7 +20,7 @@
     @include flex(center, unset);
     height: 3.2rem;
     background-color: #464545;
-    margin: 1rem 0 1rem 1rem;
+    margin: 0.7rem 0 0.7rem 1rem;
     padding: 0 1rem;
     font-size: 1.4rem;
     border-radius: 4px;

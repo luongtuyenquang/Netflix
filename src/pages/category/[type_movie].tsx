@@ -1,15 +1,17 @@
 import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
-import allMovies from '../../store-data/allMovies'
 import MovieCard from '../../common/MovieCard'
 import headerScroll from '../../common/headerScroll'
-import footerTypesMovie from '../../store-data/footer/footerTypesMovie'
+import footerTypesMovie from '../../mock-data/footerTypesMovie'
+import sortMoviesByYear from '../../common/sortMoviesByYear'
+import { AllMoviesProps } from '../../interface/allTypesMovie'
 
-const TypeMovie: React.FC = () => {
+const TypeMovie: React.FC<AllMoviesProps> = ({ moviesData, movieSeriesData }) => {
   const router = useRouter()
   const [typeMovie, setTypeMovie] = useState<string>('')
   const [nameTypeMovie, setNameTypeMovie] = useState<string>('')
-  const sortAllMovies = allMovies.sort((a, b) => b.movie.year - a.movie.year)
+  const allMoviesData = [...moviesData, ...movieSeriesData]
+  const sortAllMovies = sortMoviesByYear(allMoviesData, 'descrease')
 
   useEffect(() => {
     const header = document.querySelector('.header') as HTMLElement
@@ -57,6 +59,16 @@ const TypeMovie: React.FC = () => {
       </div>
     </section>
   )
+}
+
+export async function getServerSideProps() {
+  const resMovies = await fetch('https://632d70830d7928c7d24b1319.mockapi.io/api/movies')
+  const resMovieSeries = await fetch('https://632d70830d7928c7d24b1319.mockapi.io/api/movie-series')
+
+  const dataMovies = await resMovies.json()
+  const dataMovieSeries = await resMovieSeries.json()
+
+  return { props: { moviesData: dataMovies, movieSeriesData: dataMovieSeries } }
 }
 
 export default TypeMovie

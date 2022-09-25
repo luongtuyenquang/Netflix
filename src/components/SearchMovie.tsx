@@ -1,17 +1,19 @@
 import { Dispatch, MutableRefObject, SetStateAction, useEffect, useRef, useState } from 'react'
-import allMovies from '../store-data/allMovies'
 import removeVietNameseTones from '../utils/removeVietNameseTones'
 import MovieTS from '../interface/movie'
 
-const SearchMovie: React.FC<{ setSortAllMovies: Dispatch<SetStateAction<MovieTS[]>> }> = ({
-  setSortAllMovies,
-}) => {
+interface SearchMovieProps {
+  setSortAllMovies: Dispatch<SetStateAction<MovieTS[]>>
+  allMoviesData: MovieTS[]
+}
+
+const SearchMovie: React.FC<SearchMovieProps> = ({ setSortAllMovies, allMoviesData }) => {
   const inputRef = useRef() as MutableRefObject<HTMLInputElement>
   const [valueInput, setValueInput] = useState('')
 
   const handleResetValue = () => {
     setValueInput('')
-    setSortAllMovies(allMovies)
+    setSortAllMovies(allMoviesData)
     inputRef.current?.focus()
   }
 
@@ -20,7 +22,7 @@ const SearchMovie: React.FC<{ setSortAllMovies: Dispatch<SetStateAction<MovieTS[
 
     elmInput.onkeyup = (e) => {
       if (e.which === 13) {
-        const resultSearch = allMovies.filter((item) => {
+        const resultSearch = allMoviesData.filter((item) => {
           return (
             item.movie.name.toLowerCase().includes(valueInput.trim().toLowerCase()) ||
             item.movie.category
@@ -39,7 +41,7 @@ const SearchMovie: React.FC<{ setSortAllMovies: Dispatch<SetStateAction<MovieTS[
         window.scrollTo(0, 0)
       }
       if (valueInput === '') {
-        setSortAllMovies(allMovies)
+        setSortAllMovies(allMoviesData)
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps

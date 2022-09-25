@@ -1,6 +1,7 @@
 interface MovieTS {
   status: boolean
   msg: string
+  type: string
   movie: {
     modified: {
       time: string

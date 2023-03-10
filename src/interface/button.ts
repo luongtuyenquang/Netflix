@@ -5,7 +5,6 @@ export interface ButtonLinkTS {
   href: string
   className: string
   target?: string
-  rel?: string
 }
 
 export interface ButtonNoLinkTS {

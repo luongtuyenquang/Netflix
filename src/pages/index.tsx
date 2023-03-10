@@ -1,26 +1,32 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import Banner from '../components/Banner'
+import Banner, { SkeletonBanner } from '../components/Banner'
 import TrendingNow from '../components/TrendingNow'
 import TopRated from '../components/TopRated'
-import sortMoviesByYear from '../common/sortMoviesByYear'
-import MovieTS from '../interface/movie'
+import { sortMoviesByYear } from '../utils'
+import Movie from '../interface/movie'
+import { useGetListMovies } from '../modules/api'
+import { SkeletonMovieCard } from '../components/Card/MovieCard'
 
 interface MovieProps {
-  movies: MovieTS[]
+  movies: Movie[]
 }
 
-const Home: NextPage<MovieProps> = ({ movies }) => {
-  const filterTypeTrendingNow = movies.filter((item) => {
+const Home: NextPage<MovieProps> = () => {
+  const { listMovies, isLoading } = useGetListMovies()
+
+  const filterTypeTrendingNow = listMovies.filter((item) => {
     if (item.type === 'trending-now') {
       return item
     }
   })
-  const filterTypeTopRated = movies.filter((item) => {
+
+  const filterTypeTopRated = listMovies.filter((item) => {
     if (item.type === 'top-rated') {
       return item
     }
   })
+
   const trendingNowMovies = sortMoviesByYear(filterTypeTrendingNow, 'descrease')
   const topRatedMovies = sortMoviesByYear(filterTypeTopRated, 'descrease')
 
@@ -30,31 +36,34 @@ const Home: NextPage<MovieProps> = ({ movies }) => {
         <title>Netflix - Trang chủ</title>
       </Head>
 
-      <Banner trendingNowMovies={trendingNowMovies} />
+      {isLoading ? <SkeletonBanner /> : <Banner venomMovie={trendingNowMovies[1]} />}
+
       <main className='main'>
         <section className='movies'>
           <p className='movies__title'>Đang là xu hướng</p>
+
           <div className='movies-list'>
-            <TrendingNow trendingNowMovies={trendingNowMovies} />
+            {isLoading ? (
+              Array.from({ length: 6 }, (_, index) => <SkeletonMovieCard key={index} />)
+            ) : (
+              <TrendingNow trendingNowMovies={trendingNowMovies} />
+            )}
           </div>
         </section>
         <div className='line'></div>
         <section className='movies'>
           <p className='movies__title'>Tỉ lệ xem cao nhất</p>
           <div className='movies-list'>
-            <TopRated topRatedMovies={topRatedMovies} />
+            {isLoading ? (
+              Array.from({ length: 6 }, (_, index) => <SkeletonMovieCard key={index} />)
+            ) : (
+              <TopRated topRatedMovies={topRatedMovies} />
+            )}
           </div>
         </section>
       </main>
     </>
   )
-}
-
-export async function getServerSideProps() {
-  const res = await fetch('https://632d70830d7928c7d24b1319.mockapi.io/api/movies')
-  const data = await res.json()
-
-  return { props: { movies: data } }
 }
 
 export default Home

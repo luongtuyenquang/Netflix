@@ -1,7 +1,7 @@
-import { ButtonLink } from '../common/Button'
-import { ItemMovieProps } from '../interface/allTypesMovie'
+import { ButtonLink } from './Button'
+import Movie from '../interface/movie'
 
-const SeriesMovie: React.FC<ItemMovieProps> = ({ item }) => {
+const SeriesMovie: React.FC<{ item: Movie }> = ({ item }) => {
   return (
     <div className='movie-series__group'>
       <p className='movie-series__title'>Tập phim: </p>
@@ -12,7 +12,6 @@ const SeriesMovie: React.FC<ItemMovieProps> = ({ item }) => {
               href={item.link_embed}
               className='movie-series__btn'
               target='_blank'
-              rel='noopener noreferrer'
               key={index}
             >
               Tập {index + 1}

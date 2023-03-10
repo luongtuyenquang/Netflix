@@ -1,13 +1,24 @@
-import { ButtonLink } from '../common/Button'
-import { TrendingNowProps } from '../interface/allTypesMovie'
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+import { ButtonLink } from './Button'
+import Movie from '../interface/movie'
 
-const Banner: React.FC<TrendingNowProps> = ({ trendingNowMovies }) => {
-  const venomMovie = trendingNowMovies[1]
+type BannerProps = { venomMovie: Movie }
 
+export const SkeletonBanner: React.FC = () => {
+  return (
+    <div className='banner__image'>
+      <SkeletonTheme baseColor='#202020' highlightColor='#444'>
+        <Skeleton height='100%' style={{ top: '-1px' }} />
+      </SkeletonTheme>
+    </div>
+  )
+}
+
+const Banner: React.FC<BannerProps> = ({ venomMovie }) => {
   return (
     <section className='banner'>
       <div className='banner__image'>
-        <img src={venomMovie.movie.poster_url} alt='banner' />
+        <img crossOrigin='anonymous' src={venomMovie.movie.poster_url} alt='banner' />
       </div>
 
       <div className='banner__info'>
@@ -18,7 +29,6 @@ const Banner: React.FC<TrendingNowProps> = ({ trendingNowMovies }) => {
             href={`${venomMovie.episodes[0].server_data[0].link_embed}`}
             className='btn'
             target='_blank'
-            rel='noopener noreferrer'
           >
             <i className='bx bx-play'></i>
             <span className='banner__btn-title'>Play</span>

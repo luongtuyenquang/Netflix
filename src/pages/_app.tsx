@@ -3,8 +3,9 @@ import { Provider } from 'react-redux'
 import type { AppProps } from 'next/app'
 import { PersistGate } from 'redux-persist/integration/react'
 import '../assets/scss/index.scss'
-import store, { persistor } from '../redux/store'
-import Layout from '../common/Layout'
+import 'react-loading-skeleton/dist/skeleton.css'
+import store, { persistor } from '../modules/redux/store'
+import AppContainer from '../components/AppContainer'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (
@@ -16,9 +17,9 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
-          <Layout>
+          <AppContainer>
             <Component {...pageProps} />
-          </Layout>
+          </AppContainer>
         </PersistGate>
       </Provider>
     </>

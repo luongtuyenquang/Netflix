@@ -1,7 +1,12 @@
 import { useEffect } from 'react'
-import MessageProp from '../interface/messageProp'
 
-const Toastify: React.FC<MessageProp> = ({ isIndex, icon, message }) => {
+interface ToastifyProps {
+  isIndex: boolean
+  icon: string
+  message: string
+}
+
+const Toastify: React.FC<ToastifyProps> = ({ isIndex, icon, message }) => {
   useEffect(() => {
     const toastify = document.querySelector('.toastify') as HTMLElement
 

@@ -1,9 +1,8 @@
-interface MovieCardTS {
-  _id?: string
+interface MovieCard {
   thumb_url: string
   name: string
   origin_name: string
   slug: string
 }
 
-export default MovieCardTS
+export default MovieCard

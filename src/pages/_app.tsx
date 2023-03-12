@@ -5,7 +5,7 @@ import { PersistGate } from 'redux-persist/integration/react'
 import '../assets/scss/index.scss'
 import 'react-loading-skeleton/dist/skeleton.css'
 import store, { persistor } from '../modules/redux/store'
-import AppContainer from '../components/AppContainer'
+import AppContainer from '../containers/AppContainer'
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (

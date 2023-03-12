@@ -1,15 +1,16 @@
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+import Skeleton from 'react-loading-skeleton'
 import { ButtonLink } from './Button'
 import Movie from '../interface/movie'
+import SkeletonContainer from '../containers/SkeletonContainer'
 
 type BannerProps = { venomMovie: Movie }
 
 export const SkeletonBanner: React.FC = () => {
   return (
     <div className='banner__image'>
-      <SkeletonTheme baseColor='#202020' highlightColor='#444'>
+      <SkeletonContainer>
         <Skeleton height='100%' style={{ top: '-1px' }} />
-      </SkeletonTheme>
+      </SkeletonContainer>
     </div>
   )
 }

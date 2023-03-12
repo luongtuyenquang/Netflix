@@ -5,18 +5,19 @@ import { useDispatch } from 'react-redux'
 import { ButtonNoLink } from '../Button'
 import { deleteMovieFavourite } from '../../modules/redux/moviesSlice'
 import MovieCard from '../../interface/movieCard'
-import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+import Skeleton from 'react-loading-skeleton'
+import SkeletonContainer from '../../containers/SkeletonContainer'
 
 type MovieCardProps = MovieCard & { _id?: string }
 
 export const SkeletonMovieCard: React.FC = () => {
   return (
     <div className='movie-card'>
-      <SkeletonTheme baseColor='#202020' highlightColor='#444'>
+      <SkeletonContainer>
         <Skeleton height={260} style={{ marginBottom: '10px' }} />
         <Skeleton width='50%' borderRadius={50} style={{ marginBottom: '10px' }} />
         <Skeleton width='80%' borderRadius={50} style={{ marginBottom: '10px' }} />
-      </SkeletonTheme>
+      </SkeletonContainer>
     </div>
   )
 }

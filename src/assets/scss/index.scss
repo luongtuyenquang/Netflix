@@ -3,9 +3,9 @@
 @import './common/mixin';
 @import './common/base';
 @import './common/button';
-@import './common/movie/index';
 
 // components
+@import './components/movie/index.scss';
 @import './components/header';
 @import './components/banner';
 @import './components/search-movie';

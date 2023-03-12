@@ -188,4 +188,25 @@
       font-size: 2.4rem;
     }
   }
+
+  &__skeleton {
+    @include flex(flex-start, center);
+    width: 100%;
+
+    @include max-1023() {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-info {
+      flex: 1;
+      margin-left: 2rem;
+
+      @include max-1023() {
+        width: 100%;
+        margin-left: unset;
+        padding: 2.5rem 2.5rem 0;
+      }
+    }
+  }
 }

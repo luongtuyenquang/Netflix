@@ -1,7 +1,7 @@
-import MovieCard from '../common/MovieCard'
-import { TrendingNowProps } from '../interface/allTypesMovie'
+import MovieCard from './Card/MovieCard'
+import Movie from '../interface/movie'
 
-const TrendingNow: React.FC<TrendingNowProps> = ({ trendingNowMovies }) => {
+const TrendingNow: React.FC<{ trendingNowMovies: Movie[] }> = ({ trendingNowMovies }) => {
   return (
     <>
       {trendingNowMovies.map((item) => {

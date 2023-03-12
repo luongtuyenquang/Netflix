@@ -1,8 +1,8 @@
 import { ReactNode } from 'react'
-import Header from '../components/Header'
 import Footer from '../components/Footer'
+import Header from '../components/Header'
 
-const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
+const AppContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
     <>
       <div className='header'>
@@ -20,4 +20,4 @@ const Layout: React.FC<{ children: ReactNode }> = ({ children }) => {
   )
 }
 
-export default Layout
+export default AppContainer

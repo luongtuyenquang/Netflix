@@ -1,8 +1,8 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import logo from '../assets/images/logo-netflix.svg'
-import { ButtonLink } from '../common/Button'
-import footerLink from '../mock-data/footerLink'
+import { ButtonLink } from './Button'
+import CATEGORIES_FOOTER from '../global/constants/categoriesFooterData'
 
 const Footer: React.FC = () => {
   return (
@@ -20,20 +20,20 @@ const Footer: React.FC = () => {
       </div>
       <div className='footer__item'>
         <p className='footer__item-title'>Phim mới</p>
-        {footerLink.newMovie.map((item, index) => {
+        {CATEGORIES_FOOTER.NEW_MOVIES.map((item, index) => {
           return (
             <Link href={item.link} key={index}>
-              <a className={item.className}>{item.name}</a>
+              <a className='footer__item-text'>{item.name}</a>
             </Link>
           )
         })}
       </div>
       <div className='footer__item'>
         <p className='footer__item-title'>Phim lẻ</p>
-        {footerLink.singleMovie.map((item, index) => {
+        {CATEGORIES_FOOTER.SINGLE_MOVIES.map((item, index) => {
           return (
             <Link href={item.link} key={index}>
-              <a className={item.className}>{item.name}</a>
+              <a className='footer__item-text'>{item.name}</a>
             </Link>
           )
         })}

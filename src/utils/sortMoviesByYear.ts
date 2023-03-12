@@ -1,6 +1,6 @@
-import MovieTS from '../interface/movie'
+import Movie from '../interface/movie'
 
-type DataProps = MovieTS[]
+type DataProps = Movie[]
 type TypeProps = 'increase' | 'descrease'
 
 const sortMoviesByYear = (data: DataProps, type: TypeProps) => {

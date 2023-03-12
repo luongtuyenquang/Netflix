@@ -1,7 +1,7 @@
-import MovieCard from '../common/MovieCard'
-import { TopRatedProps } from '../interface/allTypesMovie'
+import MovieCard from './Card/MovieCard'
+import Movie from '../interface/movie'
 
-const TopRated: React.FC<TopRatedProps> = ({ topRatedMovies }) => {
+const TopRated: React.FC<{ topRatedMovies: Movie[] }> = ({ topRatedMovies }) => {
   return (
     <>
       {topRatedMovies.map((item) => {

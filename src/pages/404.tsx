@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import { ButtonLink } from '../common/Button'
+import { ButtonLink } from '../components/Button'
 
 const NotFound: React.FC = () => {
   return (

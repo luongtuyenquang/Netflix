@@ -2,23 +2,23 @@ import Head from 'next/head'
 import { useRouter } from 'next/router'
 import { useEffect } from 'react'
 import { useSelector } from 'react-redux'
-import headerScroll from '../../common/headerScroll'
-import MovieCard from '../../common/MovieCard'
-import { RootState } from '../../redux/store'
+import MovieCard from '../../components/Card/MovieCard'
+import { RootState } from '../../modules/redux/store'
 import MovieCardTS from '../../interface/movieCard'
+import { changeColorHeader } from '../../utils'
+
+type MovieCardProps = MovieCardTS & { _id?: string }
 
 const MoviesFavourite: React.FC = () => {
   const router = useRouter()
-  const movies = useSelector<RootState, MovieCardTS[]>((state) => state.movies)
+  const movies = useSelector<RootState, MovieCardProps[]>((state) => state.movies)
 
   useEffect(() => {
     const header = document.querySelector('.header') as HTMLElement
-
-    headerScroll({
-      header: header,
+    changeColorHeader({
+      header,
       pathName: router.pathname,
       pathNameUrl: '/movie/favourite',
-      color: 'black',
     })
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])

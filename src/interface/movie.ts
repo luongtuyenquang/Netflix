@@ -1,4 +1,4 @@
-interface MovieTS {
+interface Movie {
   status: boolean
   msg: string
   type: string
@@ -45,4 +45,4 @@ interface MovieTS {
   }[]
 }
 
-export default MovieTS
+export default Movie

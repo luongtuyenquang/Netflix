@@ -1,9 +1,11 @@
 import { createSlice } from '@reduxjs/toolkit'
-import MovieCardTS from '../interface/movieCard'
+import MovieCard from '../../interface/movieCard'
+
+type MovieCardProps = MovieCard & { _id?: string }
 
 let index = -1
 
-const initialState: MovieCardTS[] = []
+const initialState: MovieCardProps[] = []
 
 const movieSlice = createSlice({
   name: 'movies',

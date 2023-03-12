@@ -1,15 +1,16 @@
 import { Dispatch, MutableRefObject, SetStateAction, useEffect, useRef, useState } from 'react'
-import removeVietNameseTones from '../utils/removeVietNameseTones'
-import MovieTS from '../interface/movie'
+import { removeVietNameseTones } from '../utils'
+import Movie from '../interface/movie'
 
 interface SearchMovieProps {
-  setSortAllMovies: Dispatch<SetStateAction<MovieTS[]>>
-  allMoviesData: MovieTS[]
+  setSortAllMovies: Dispatch<SetStateAction<Movie[]>>
+  allMoviesData: Movie[]
 }
 
 const SearchMovie: React.FC<SearchMovieProps> = ({ setSortAllMovies, allMoviesData }) => {
   const inputRef = useRef() as MutableRefObject<HTMLInputElement>
   const [valueInput, setValueInput] = useState('')
+  const valueSearch = valueInput.trim().toLowerCase()
 
   const handleResetValue = () => {
     setValueInput('')
@@ -24,16 +25,11 @@ const SearchMovie: React.FC<SearchMovieProps> = ({ setSortAllMovies, allMoviesDa
       if (e.which === 13) {
         const resultSearch = allMoviesData.filter((item) => {
           return (
-            item.movie.name.toLowerCase().includes(valueInput.trim().toLowerCase()) ||
-            item.movie.category
-              .join(', ')
-              .toLowerCase()
-              .includes(valueInput.trim().toLowerCase()) ||
-            removeVietNameseTones(item.movie.name.toLowerCase()).includes(
-              valueInput.trim().toLowerCase()
-            ) ||
+            item.movie.name.toLowerCase().includes(valueSearch) ||
+            item.movie.category.join(', ').toLowerCase().includes(valueSearch) ||
+            removeVietNameseTones(item.movie.name.toLowerCase()).includes(valueSearch) ||
             removeVietNameseTones(item.movie.category.join(', ').toLowerCase()).includes(
-              valueInput.trim().toLowerCase()
+              valueSearch
             )
           )
         })

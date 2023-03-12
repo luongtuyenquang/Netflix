@@ -1,4 +1,4 @@
-const footerTypesMovie = [
+const CATEGORIES_EXIST = [
   {
     name: 'Phim hành động',
     category: 'Hành Động',
@@ -21,4 +21,4 @@ const footerTypesMovie = [
   },
 ]
 
-export default footerTypesMovie
+export default CATEGORIES_EXIST
